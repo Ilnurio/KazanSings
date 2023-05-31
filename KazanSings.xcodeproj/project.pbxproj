@@ -58,11 +58,11 @@
 		469975102A27CA2D005231CC /* KazanSings */ = {
 			isa = PBXGroup;
 			children = (
+				4C39C18D2A27D4D500A71265 /* Models */,
 				469975272A27CA92005231CC /* Storyboards */,
 				469975282A27CAC1005231CC /* ViewControllers */,
 				4699752C2A27CB05005231CC /* Source */,
 				469975262A27CA5F005231CC /* App */,
-				4C39C18D2A27D4D500A71265 /* Models */,
 			);
 			path = KazanSings;
 			sourceTree = "<group>";
