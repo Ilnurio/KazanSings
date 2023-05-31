@@ -24,7 +24,6 @@
 		4699751A2A27CA2E005231CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4699751D2A27CA2E005231CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4699751F2A27CA2E005231CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C87412F2A27D1E3006BB5BA /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Hello.swift; path = ../../../Hello.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +56,9 @@
 		469975102A27CA2D005231CC /* KazanSings */ = {
 			isa = PBXGroup;
 			children = (
+				4C39C1862A27D36A00A71265 /* Models */,
 				469975272A27CA92005231CC /* Storyboards */,
-				469975282A27CAC1005231CC /* ViewControllerss */,
+				469975282A27CAC1005231CC /* ViewControllers */,
 				4699752C2A27CB05005231CC /* Source */,
 				469975262A27CA5F005231CC /* App */,
 			);
@@ -84,27 +84,12 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		469975282A27CAC1005231CC /* ViewControllerss */ = {
+		469975282A27CAC1005231CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				469975152A27CA2D005231CC /* ViewController.swift */,
 			);
-			path = ViewControllerss;
-			sourceTree = "<group>";
-		};
-		469975292A27CAE5005231CC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4699752B2A27CAFA005231CC /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				4C87412F2A27D1E3006BB5BA /* Hello.swift */,
-			);
-			path = Services;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		4699752C2A27CB05005231CC /* Source */ = {
@@ -113,6 +98,13 @@
 				4699751A2A27CA2E005231CC /* Assets.xcassets */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		4C39C1862A27D36A00A71265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +180,6 @@
 			files = (
 				469975162A27CA2D005231CC /* ViewController.swift in Sources */,
 				469975122A27CA2D005231CC /* AppDelegate.swift in Sources */,
-				4C8741302A27D1E3006BB5BA /* Hello.swift in Sources */,
 				469975142A27CA2D005231CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +335,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,6 +367,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
