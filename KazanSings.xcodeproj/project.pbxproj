@@ -13,7 +13,6 @@
 		469975192A27CA2D005231CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469975172A27CA2D005231CC /* Main.storyboard */; };
 		4699751B2A27CA2E005231CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4699751A2A27CA2E005231CC /* Assets.xcassets */; };
 		4699751E2A27CA2E005231CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4699751C2A27CA2E005231CC /* LaunchScreen.storyboard */; };
-		4C8741302A27D1E3006BB5BA /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C87412F2A27D1E3006BB5BA /* Hello.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,11 +57,9 @@
 		469975102A27CA2D005231CC /* KazanSings */ = {
 			isa = PBXGroup;
 			children = (
-				469975292A27CAE5005231CC /* Model */,
 				469975272A27CA92005231CC /* Storyboards */,
 				469975282A27CAC1005231CC /* ViewControllerss */,
 				4699752C2A27CB05005231CC /* Source */,
-				4699752B2A27CAFA005231CC /* Services */,
 				469975262A27CA5F005231CC /* App */,
 			);
 			path = KazanSings;
