@@ -56,11 +56,9 @@
 		469975102A27CA2D005231CC /* KazanSings */ = {
 			isa = PBXGroup;
 			children = (
-				469975292A27CAE5005231CC /* Model */,
 				469975272A27CA92005231CC /* Storyboards */,
 				469975282A27CAC1005231CC /* ViewControllerss */,
 				4699752C2A27CB05005231CC /* Source */,
-				4699752B2A27CAFA005231CC /* Services */,
 				469975262A27CA5F005231CC /* App */,
 			);
 			path = KazanSings;
@@ -91,20 +89,6 @@
 				469975152A27CA2D005231CC /* ViewController.swift */,
 			);
 			path = ViewControllerss;
-			sourceTree = "<group>";
-		};
-		469975292A27CAE5005231CC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4699752B2A27CAFA005231CC /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		4699752C2A27CB05005231CC /* Source */ = {
