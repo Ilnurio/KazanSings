@@ -39,16 +39,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
-                                        <connections>
-                                            <action selector="timerButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8P-5z-ElM"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shw-pS-aGi">
                                         <rect key="frame" x="133" y="0.0" width="115" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
                                         <connections>
-                                            <action selector="infoButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sht-qJ-mQC"/>
+                                            <segue destination="PoZ-mU-29b" kind="show" id="MNM-KK-OM9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -76,17 +73,55 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="q4k-mc-LwK">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="shareSheetTapped:" destination="BYZ-38-t0r" id="wmP-kQ-eP8"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="infoButton" destination="HoM-cH-Lbd" id="FSZ-56-cH7"/>
+                        <outlet property="infoButton" destination="shw-pS-aGi" id="Nk6-fF-bk0"/>
                         <outlet property="playButton" destination="sgI-RU-dQg" id="8q9-60-2gd"/>
-                        <outlet property="timerButton" destination="shw-pS-aGi" id="tf0-bk-AtT"/>
+                        <outlet property="timerButton" destination="HoM-cH-Lbd" id="p8U-5A-3Ze"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1378.6046511627908" y="-15.450643776824036"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="7Db-QG-4rr">
+            <objects>
+                <viewController id="PoZ-mU-29b" customClass="InfoViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dYb-kW-ktV">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="33" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wET-PB-sBx">
+                                <rect key="frame" x="16" y="133" width="398" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Cz-UU-E9j"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="wET-PB-sBx" firstAttribute="top" secondItem="7Cz-UU-E9j" secondAttribute="top" constant="30" id="Hab-k1-5dV"/>
+                            <constraint firstItem="wET-PB-sBx" firstAttribute="leading" secondItem="7Cz-UU-E9j" secondAttribute="leading" constant="16" id="HcP-ue-th5"/>
+                            <constraint firstItem="7Cz-UU-E9j" firstAttribute="trailing" secondItem="wET-PB-sBx" secondAttribute="trailing" constant="16" id="P1h-IM-swP"/>
+                            <constraint firstItem="wET-PB-sBx" firstAttribute="centerX" secondItem="dYb-kW-ktV" secondAttribute="centerX" id="Xsy-4h-ai6"/>
+                            <constraint firstItem="7Cz-UU-E9j" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wET-PB-sBx" secondAttribute="trailing" id="pmF-Lm-kVl"/>
+                            <constraint firstItem="wET-PB-sBx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7Cz-UU-E9j" secondAttribute="leading" id="tWV-P6-Tw8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Et5-EF-QWa"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="wET-PB-sBx" id="eng-i8-QFx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uh9-vx-bNp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2210" y="-15"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="uiE-55-IEs">

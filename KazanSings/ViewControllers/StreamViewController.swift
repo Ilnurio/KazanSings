@@ -19,8 +19,8 @@ final class StreamViewController: UIViewController {
         super.viewDidLoad()
         title = "Казань Поёт"
         playButton.setImage(UIImage(named: "playbutton.png"), for: .normal)
-        infoButton.setImage(UIImage(named: "infobutton"), for: .normal)
-        timerButton.setImage(UIImage(named: "timerbutton"), for: .normal)
+        infoButton.setImage(UIImage(named: "infobutton.png"), for: .normal)
+        timerButton.setImage(UIImage(named: "timerbutton.png"), for: .normal)
     }
     
     @IBAction func playButtonTapped() {
@@ -34,13 +34,26 @@ final class StreamViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func shareSheetTapped(_ sender: UIBarButtonItem) {
+        presentShareSheet()
+    }
+    
     @IBAction func timerButtonTapped() {
         
     }
-    
-    @IBAction func infoButtonTapped() {
-        
+}
+
+ // MARK: - ShareSheet
+extension StreamViewController {
+    func presentShareSheet() {
+        let image = UIImage(named: "logosheet.jpg")!
+        let text = """
+    Слушайте первое музыкальное онлайн-радио в Татарстане.
+    Здесь звучат песни, которые больше нигде не звучат.
+"""
+        let shareSheet = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)
+        shareSheet.popoverPresentationController?.sourceView = self.view
+        present(shareSheet, animated: true, completion: nil)
     }
-    
-    
 }
