@@ -48,10 +48,7 @@ final class StreamViewController: UIViewController {
 extension StreamViewController {
     func presentShareSheet() {
         let image = UIImage(named: "logosheet.jpg")!
-        let text = """
-    Слушайте первое музыкальное онлайн-радио в Татарстане.
-    Здесь звучат песни, которые больше нигде не звучат.
-"""
+        let text = textforShare
         let shareSheet = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)
         shareSheet.popoverPresentationController?.sourceView = self.view
         present(shareSheet, animated: true, completion: nil)
