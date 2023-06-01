@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		469975122A27CA2D005231CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469975112A27CA2D005231CC /* AppDelegate.swift */; };
 		469975142A27CA2D005231CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469975132A27CA2D005231CC /* SceneDelegate.swift */; };
-		469975162A27CA2D005231CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469975152A27CA2D005231CC /* ViewController.swift */; };
 		469975192A27CA2D005231CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469975172A27CA2D005231CC /* Main.storyboard */; };
 		4699751B2A27CA2E005231CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4699751A2A27CA2E005231CC /* Assets.xcassets */; };
 		4699751E2A27CA2E005231CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4699751C2A27CA2E005231CC /* LaunchScreen.storyboard */; };
 		4C39C18C2A27D4CB00A71265 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39C18B2A27D4CB00A71265 /* Hello.swift */; };
+		4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94415F2A28C36C0069F70E /* StreamViewController.swift */; };
+		4C9441622A28C3AE0069F70E /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4699750E2A27CA2D005231CC /* KazanSings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KazanSings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469975112A27CA2D005231CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469975132A27CA2D005231CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		469975152A27CA2D005231CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		469975182A27CA2D005231CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4699751A2A27CA2E005231CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4699751D2A27CA2E005231CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4699751F2A27CA2E005231CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C39C18B2A27D4CB00A71265 /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
+		4C94415F2A28C36C0069F70E /* StreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
+		4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,20 +63,20 @@
 				4C39C18D2A27D4D500A71265 /* Models */,
 				469975272A27CA92005231CC /* Storyboards */,
 				469975282A27CAC1005231CC /* ViewControllers */,
-				4699752C2A27CB05005231CC /* Source */,
-				469975262A27CA5F005231CC /* App */,
+				4699752C2A27CB05005231CC /* Sources */,
+				469975262A27CA5F005231CC /* Application */,
 			);
 			path = KazanSings;
 			sourceTree = "<group>";
 		};
-		469975262A27CA5F005231CC /* App */ = {
+		469975262A27CA5F005231CC /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				469975112A27CA2D005231CC /* AppDelegate.swift */,
 				469975132A27CA2D005231CC /* SceneDelegate.swift */,
 				4699751F2A27CA2E005231CC /* Info.plist */,
 			);
-			path = App;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		469975272A27CA92005231CC /* Storyboards */ = {
@@ -89,17 +91,18 @@
 		469975282A27CAC1005231CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				469975152A27CA2D005231CC /* ViewController.swift */,
+				4C94415F2A28C36C0069F70E /* StreamViewController.swift */,
+				4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		4699752C2A27CB05005231CC /* Source */ = {
+		4699752C2A27CB05005231CC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				4699751A2A27CA2E005231CC /* Assets.xcassets */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		4C39C18D2A27D4D500A71265 /* Models */ = {
@@ -181,8 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469975162A27CA2D005231CC /* ViewController.swift in Sources */,
+				4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */,
 				469975122A27CA2D005231CC /* AppDelegate.swift in Sources */,
+				4C9441622A28C3AE0069F70E /* BaseNavigationController.swift in Sources */,
 				4C39C18C2A27D4CB00A71265 /* Hello.swift in Sources */,
 				469975142A27CA2D005231CC /* SceneDelegate.swift in Sources */,
 			);
@@ -331,21 +335,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RLGV5KZ4KA;
+				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KazanSings/App/Info.plist;
+				INFOPLIST_FILE = KazanSings/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SmartActive.KazanSings;
+				PRODUCT_BUNDLE_IDENTIFIER = KazanSings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -363,21 +367,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RLGV5KZ4KA;
+				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KazanSings/App/Info.plist;
+				INFOPLIST_FILE = KazanSings/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SmartActive.KazanSings;
+				PRODUCT_BUNDLE_IDENTIFIER = KazanSings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
