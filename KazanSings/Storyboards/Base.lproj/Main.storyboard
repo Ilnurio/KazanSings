@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="weF-Ic-053">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="weF-Ic-053">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Казань Поет-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="StreamViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,28 +23,66 @@
                                     <constraint firstAttribute="width" secondItem="U67-Vz-wsD" secondAttribute="height" multiplier="1:1" id="cVd-9h-rHe"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgI-RU-dQg">
+                                <rect key="frame" x="177.66666666666666" y="524" width="75" height="35"/>
+                                <inset key="imageEdgeInsets" minX="100" minY="100" maxX="100" maxY="100"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="playButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="enB-5J-LPz"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-MZ-qi5">
+                                <rect key="frame" x="91" y="466" width="248" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoM-cH-Lbd">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="timerButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8P-5z-ElM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shw-pS-aGi">
+                                        <rect key="frame" x="133" y="0.0" width="115" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="infoButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sht-qJ-mQC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
+                            <constraint firstItem="sgI-RU-dQg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.174419" id="0re-oW-zLm"/>
+                            <constraint firstItem="sgI-RU-dQg" firstAttribute="top" secondItem="a5v-MZ-qi5" secondAttribute="bottom" constant="23.666666666666686" id="B4r-XN-Wiu"/>
+                            <constraint firstItem="a5v-MZ-qi5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.576744" id="Erf-cN-6yb"/>
+                            <constraint firstItem="a5v-MZ-qi5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LUZ-8J-LG4"/>
                             <constraint firstItem="U67-Vz-wsD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TNP-ho-V2r"/>
+                            <constraint firstItem="sgI-RU-dQg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0375536" id="Um6-9Q-Jgz"/>
                             <constraint firstItem="U67-Vz-wsD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="iKf-7R-lZ3"/>
+                            <constraint firstItem="sgI-RU-dQg" firstAttribute="top" secondItem="U67-Vz-wsD" secondAttribute="bottom" constant="81.333333333333371" id="imQ-ds-0ui"/>
+                            <constraint firstItem="sgI-RU-dQg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jht-E0-sIw"/>
                             <constraint firstItem="U67-Vz-wsD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="oAM-W4-g60"/>
+                            <constraint firstItem="a5v-MZ-qi5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0368383" id="oYQ-rI-htm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="SLG-Ln-gPp">
-                        <rightBarButtonItems>
-                            <barButtonItem image="gearshape" catalog="system" id="q4k-mc-LwK">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                            <barButtonItem title="SH" id="Xlj-oL-p9k">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                            <barButtonItem image="info.circle.fill" catalog="system" id="eYs-A9-iTe">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                    <navigationItem key="navigationItem" title="Казань Поет" id="SLG-Ln-gPp">
+                        <barButtonItem key="leftBarButtonItem" image="waveform.path" catalog="system" id="Xlj-oL-p9k">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="q4k-mc-LwK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="infoButton" destination="HoM-cH-Lbd" id="FSZ-56-cH7"/>
+                        <outlet property="playButton" destination="sgI-RU-dQg" id="8q9-60-2gd"/>
+                        <outlet property="timerButton" destination="shw-pS-aGi" id="tf0-bk-AtT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,8 +109,8 @@
     </scenes>
     <resources>
         <image name="Logo" width="5083" height="5083"/>
-        <image name="gearshape" catalog="system" width="128" height="123"/>
-        <image name="info.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="waveform.path" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.23499999940395355" green="0.14900000393390656" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
