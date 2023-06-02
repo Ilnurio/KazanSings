@@ -83,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="1378.6046511627908" y="-15.450643776824036"/>
         </scene>
-        <!--Info Table View Controller-->
+        <!--Инфо-->
         <scene sceneID="A3v-KC-dlt">
             <objects>
                 <tableViewController id="88Q-Y0-Su5" customClass="InfoTableViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,7 +117,7 @@
                             <outlet property="delegate" destination="88Q-Y0-Su5" id="I9g-ry-HiD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Xd3-wW-UyM"/>
+                    <navigationItem key="navigationItem" title="Инфо" id="Xd3-wW-UyM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBn-qL-bhr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

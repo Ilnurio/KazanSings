@@ -8,21 +8,20 @@
 import UIKit
 
 final class InfoTableViewController: UITableViewController {
+    
+    private let info = Info.getInfo()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Инфо"
-        
+        tableView.rowHeight = view.frame.height / 14
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
+//
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return info.count
     }
 
     
@@ -31,8 +30,9 @@ final class InfoTableViewController: UITableViewController {
         
         var content = cell.defaultContentConfiguration()
     
-        content.text = "Hey"
-
+        content.text = info[indexPath.row].title
+        content.image = UIImage(systemName: info[indexPath.row].imageName)
+        
         cell.contentConfiguration = content
         return cell
     }

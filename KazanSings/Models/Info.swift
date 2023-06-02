@@ -1,5 +1,5 @@
 //
-//  Hello.swift
+//  Info.swift
 //  KazanSings
 //
 //  Created by M I C H A E L on 31.05.2023.
@@ -14,19 +14,36 @@
 
 
 
-struct Infoo {
+struct Info {
     let title: String
     let imageName: String
-    let segueID: String
+    
+    var segueID: String?
+    var link: String?
 }
 
-extension Infoo {
-    static func getInfo() -> [Infoo] {
+extension Info {
+    static func getInfo() -> [Info] {
         [
-            Infoo(
-                title: <#T##String#>,
-                imageName: <#T##String#>,
-                segueID: <#T##String#>
+            Info(
+                title: "Контакты",
+                imageName: "person.circle.fill",
+                segueID: "showContact"
+            ),
+            Info(
+                title: "О нас",
+                imageName: "info.bubble.fill",
+                segueID: "showAboutUs"
+            ),
+            Info(
+                title: "Политика конфиденциальности",
+                imageName: "list.clipboard",
+                segueID: "showPolicy"
+            ),
+            Info(
+                title: "Правила",
+                imageName: "list.bullet.rectangle.fill",
+                segueID: "showRules"
             )
         ]
     }
@@ -46,7 +63,7 @@ extension Infoo {
 
 
 // MARK: - Информация
-struct Info {
+struct Info1 {
     let contact: Contact
     let aboutUs: AboutUs
     let policy: Policy
