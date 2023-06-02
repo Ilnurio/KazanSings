@@ -7,19 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		467CC74D2A2944BA00FC3B19 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467CC74C2A2944BA00FC3B19 /* InfoViewController.swift */; };
 		469975122A27CA2D005231CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469975112A27CA2D005231CC /* AppDelegate.swift */; };
 		469975142A27CA2D005231CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469975132A27CA2D005231CC /* SceneDelegate.swift */; };
 		469975192A27CA2D005231CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469975172A27CA2D005231CC /* Main.storyboard */; };
 		4699751B2A27CA2E005231CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4699751A2A27CA2E005231CC /* Assets.xcassets */; };
 		4699751E2A27CA2E005231CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4699751C2A27CA2E005231CC /* LaunchScreen.storyboard */; };
 		4C39C18C2A27D4CB00A71265 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39C18B2A27D4CB00A71265 /* Info.swift */; };
+		4C48AA202A2A1B38003DABA5 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */; };
 		4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94415F2A28C36C0069F70E /* StreamViewController.swift */; };
 		4C9441622A28C3AE0069F70E /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		467CC74C2A2944BA00FC3B19 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4699750E2A27CA2D005231CC /* KazanSings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KazanSings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469975112A27CA2D005231CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469975132A27CA2D005231CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		4699751D2A27CA2E005231CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4699751F2A27CA2E005231CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C39C18B2A27D4CB00A71265 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		4C94415F2A28C36C0069F70E /* StreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +95,7 @@
 			children = (
 				4C94415F2A28C36C0069F70E /* StreamViewController.swift */,
 				4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */,
-				467CC74C2A2944BA00FC3B19 /* InfoViewController.swift */,
+				4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,8 +190,8 @@
 				4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */,
 				469975122A27CA2D005231CC /* AppDelegate.swift in Sources */,
 				4C9441622A28C3AE0069F70E /* BaseNavigationController.swift in Sources */,
+				4C48AA202A2A1B38003DABA5 /* InfoTableViewController.swift in Sources */,
 				4C39C18C2A27D4CB00A71265 /* Info.swift in Sources */,
-				467CC74D2A2944BA00FC3B19 /* InfoViewController.swift in Sources */,
 				469975142A27CA2D005231CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
