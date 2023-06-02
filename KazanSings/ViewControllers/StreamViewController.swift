@@ -8,7 +8,7 @@
 import UIKit
 
 final class StreamViewController: UIViewController {
-    
+//
 //    var playSing = false
 //
 //    @IBOutlet var playButton: UIButton!

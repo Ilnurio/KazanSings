@@ -14,6 +14,7 @@ final class InfoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = view.frame.height / 14
+  
     }
 
     // MARK: - Table view data source
