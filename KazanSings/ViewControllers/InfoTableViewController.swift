@@ -9,32 +9,69 @@ import UIKit
 
 final class InfoTableViewController: UITableViewController {
     
-    private let info = Info.getInfo()
-
+    let infoList = InfoList.getInfoList()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = view.frame.height / 14
-  
     }
 
     // MARK: - Table view data source
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        infoList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor(named: "MainColor")
+        
+        let label = UILabel()
+        label.textColor = .opaqueSeparator
+        label.text = infoList[section].header
+        label.frame = CGRect(x: 15, y: 3, width: tableView.bounds.size.width - 30, height: 20)
+        
+        headerView.addSubview(label)
+        
+        return headerView
+    }
+
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return info.count
+        return infoList[section].titles.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let imageName = infoList[indexPath.section].imageNames[indexPath.row]
+        let titleName = infoList[indexPath.section].titles[indexPath.row]
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-    
-        content.text = info[indexPath.row].title
         content.textProperties.color = .white
-        content.image = UIImage(systemName: info[indexPath.row].imageName)
+        
+        let selectedView = UIView()
+            selectedView.backgroundColor = UIColor(named: "CellColor")
+            cell.selectedBackgroundView = selectedView
+        
+        if infoList[indexPath.section].segueIDs?[indexPath.row] != nil {
+            let image = UIImage(systemName: "chevron.right") ?? UIImage()
+            let accessory = UIImageView(frame:CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+            
+            accessory.image = image
+            accessory.tintColor = UIColor.opaqueSeparator
+            cell.accessoryView = accessory
+        }
+        
+    
+        content.image = UIImage(systemName: imageName) ?? UIImage(named: imageName)
+        content.text = titleName
+        
         
         cell.contentConfiguration = content
         return cell
     }
     
+    
+   
     
     
     
