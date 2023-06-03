@@ -60,7 +60,7 @@ extension InfoList {
                 header: "О нас",
                 titles: ["Про «Казань Поёт»",
                          "Команда"],
-                imageNames: ["info.bubble.fill",
+                imageNames: ["info.circle.fill",
                              "person.circle.fill"],
                 segueIDs: ["showAboutUs",
                            "showCompany"]
