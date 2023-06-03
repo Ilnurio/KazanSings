@@ -53,7 +53,7 @@ final class InfoTableViewController: UITableViewController {
                 selectedView.backgroundColor = UIColor(named: "CellColor")
                 cell.selectedBackgroundView = selectedView
             
-            if infoList[indexPath.section].segueIDs?[indexPath.row] == nil {
+            if infoList[indexPath.section].segueIDs?[indexPath.row] != nil {
                 let image = UIImage(systemName: "chevron.right") ?? UIImage()
                 let accessory = UIImageView(frame: CGRect(
                     x: 0,
