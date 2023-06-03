@@ -28,12 +28,14 @@ final class StreamViewController: UIViewController {
         
         commandCenter.playCommand.addTarget { [weak self] _ in
             self?.player.play()
+            self?.playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
             return .success
         }
         
         // Добавляем обработчик для команды паузы
         commandCenter.pauseCommand.addTarget { [weak self] _ in
             self?.player.pause()
+            self?.playButton.setImage(UIImage(named: "playbutton"), for: .normal)
             return .success
         }
     
@@ -52,16 +54,7 @@ final class StreamViewController: UIViewController {
         
         updateNowPlayingInfo()
     }
-    
-    private func setupPlayButton() {
-        if player.timeControlStatus == .playing {
-            playButton.setBackgroundImage(UIImage(named: "playbutton"), for: .normal)
-        } else {
-            playButton.setBackgroundImage(nil, for: .normal)
-            playButton.setBackgroundImage(UIImage(named: "pausebutton"), for: .normal)
-        }
-    }
-    
+        
     private func updateNowPlayingInfo() {
         var nowPlayingInfo = [String: Any]()
         nowPlayingInfo[MPMediaItemPropertyTitle] = "Казань поет"
