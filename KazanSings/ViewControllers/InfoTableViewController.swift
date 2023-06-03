@@ -46,25 +46,36 @@ final class InfoTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.textProperties.color = .white
         
-        let selectedView = UIView()
-            selectedView.backgroundColor = UIColor(named: "CellColor")
-            cell.selectedBackgroundView = selectedView
-        
-        if infoList[indexPath.section].segueIDs?[indexPath.row] != nil {
-            let image = UIImage(systemName: "chevron.right") ?? UIImage()
-            let accessory = UIImageView(frame:CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        switch indexPath.section {
+        case 0...infoList.count - 2:
+            let selectedView = UIView()
+                selectedView.backgroundColor = UIColor(named: "CellColor")
+                cell.selectedBackgroundView = selectedView
             
-            accessory.image = image
-            accessory.tintColor = UIColor.opaqueSeparator
-            cell.accessoryView = accessory
+            if infoList[indexPath.section].segueIDs?[indexPath.row] == nil {
+                let image = UIImage(systemName: "chevron.right") ?? UIImage()
+                let accessory = UIImageView(frame: CGRect(
+                    x: 0,
+                    y: 0,
+                    width: image.size.width,
+                    height: image.size.height
+                ))
+                accessory.image = image
+                accessory.tintColor = UIColor.opaqueSeparator
+                cell.accessoryView = accessory
+            }
+            
+            content.textProperties.color = .white
+            content.image = UIImage(systemName: imageName) ?? UIImage(named: imageName)
+        default:
+            cell.selectionStyle = .none
+            cell.separatorInset.left = view.frame.width
+            content.textProperties.color = .opaqueSeparator
+            content.textProperties.alignment = .center
         }
         
-    
-        content.image = UIImage(systemName: imageName) ?? UIImage(named: imageName)
         content.text = titleName
-        
         
         cell.contentConfiguration = content
         return cell

@@ -5,6 +5,8 @@
 //  Created by M I C H A E L on 31.05.2023.
 //
 
+import Foundation
+
 
 //let textforShare =
 //"""
@@ -31,7 +33,18 @@ struct InfoList {
 
 extension InfoList {
     static func getInfoList() -> [InfoList] {
-        [
+        
+        var appVersion = "Не удалось получить версию приложения"
+        
+        let version = Bundle.main.object(
+            forInfoDictionaryKey: "CFBundleShortVersionString"
+        )
+        
+        if let version = version as? String {
+            appVersion = "Version: \(version)"
+        }
+        
+        return [
             InfoList(
                 header: "Контакты",
                 titles: ["Перейти на сайт",
@@ -46,6 +59,15 @@ extension InfoList {
                              "whatsApp"]
             ),
             InfoList(
+                header: "О нас",
+                titles: ["Про «Казань Поёт»",
+                         "Команда"],
+                imageNames: ["info.bubble.fill",
+                             "person.circle.fill"],
+                segueIDs: ["showAboutUs",
+                           "showCompany"]
+            ),
+            InfoList(
                 header: "О приложении",
                 titles: ["Оценить в AppStore",
                          "Политика конфиденциальности",
@@ -56,6 +78,11 @@ extension InfoList {
                 segueIDs: [nil,
                            "showPolicy",
                            "showRules"]
+            ),
+            InfoList(
+                header: "",
+                titles: [appVersion],
+                imageNames: [""]
             )
         ]
         
