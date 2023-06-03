@@ -56,7 +56,12 @@ extension InfoList {
                              "myMail",
                              "vk",
                              "telegram",
-                             "whatsApp"]
+                             "whatsApp"],
+                links: ["https://www.kazansings.ru",
+                        "on-line-misha@mail.ru",
+                        "https://vk.me/join/AJQ1dxSPjSPs_1X5AHsBqPnf",
+                        "https://t.me/kazanpoet",
+                        "https://chat.whatsapp.com/DcYXYr39xVLEbu9wGQtB5u"]
             ),
             InfoList(
                 header: "О нас",

@@ -9,7 +9,7 @@ import UIKit
 
 final class InfoTableViewController: UITableViewController {
     
-    let infoList = InfoList.getInfoList()
+    private let infoList = InfoList.getInfoList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,6 @@ final class InfoTableViewController: UITableViewController {
         return headerView
     }
 
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return infoList[section].titles.count
     }
@@ -82,6 +81,30 @@ final class InfoTableViewController: UITableViewController {
     }
     
     
+    
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let link = infoList[indexPath.section].links?[indexPath.row] ?? ""
+        let title = infoList[indexPath.section].titles[indexPath.row]
+        
+        switch indexPath.section {
+        case 0 where indexPath.row != 1:
+            guard let url = URL(string: link) else { return }
+//            UIApplication.shared.open(url)
+            
+            
+            showOkAlert(title: title, message: link) { _ in
+                UIApplication.shared.open(url)
+            }
+        case 0 where indexPath.row == 1:
+            break
+        default:
+            break
+        }
+    }
    
     
     
@@ -93,43 +116,6 @@ final class InfoTableViewController: UITableViewController {
     
     
     
-    
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation

@@ -16,6 +16,7 @@
 		4C48AA202A2A1B38003DABA5 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */; };
 		4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94415F2A28C36C0069F70E /* StreamViewController.swift */; };
 		4C9441622A28C3AE0069F70E /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */; };
+		4CB515D82A2BEC7400F9E4EC /* Ext + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB515D72A2BEC7400F9E4EC /* Ext + Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		4C94415F2A28C36C0069F70E /* StreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		4CB515D72A2BEC7400F9E4EC /* Ext + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				4C94415F2A28C36C0069F70E /* StreamViewController.swift */,
 				4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */,
 				4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */,
+				4CB515D72A2BEC7400F9E4EC /* Ext + Alert.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */,
 				469975122A27CA2D005231CC /* AppDelegate.swift in Sources */,
+				4CB515D82A2BEC7400F9E4EC /* Ext + Alert.swift in Sources */,
 				4C9441622A28C3AE0069F70E /* BaseNavigationController.swift in Sources */,
 				4C48AA202A2A1B38003DABA5 /* InfoTableViewController.swift in Sources */,
 				4C39C18C2A27D4CB00A71265 /* InfoList.swift in Sources */,
