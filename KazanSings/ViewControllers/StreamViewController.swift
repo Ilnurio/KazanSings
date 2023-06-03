@@ -71,17 +71,24 @@ final class StreamViewController: UIViewController {
         
 //        updateNowPlayingInfo()
     }
-        
+    
+    
+    @IBAction func shareSheetTapped(_ sender: UIBarButtonItem) {
+        presentShareSheet()
+    }
+    
 
 }
 
  // MARK: - ShareSheet
-//extension StreamViewController {
-//    func presentShareSheet() {
-//        let image = UIImage(named: "logosheet.jpg")!
-//        let text = textforShare
-//        let shareSheet = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)
-//        shareSheet.popoverPresentationController?.sourceView = self.view
-//        present(shareSheet, animated: true, completion: nil)
-//    }
-//}
+extension StreamViewController {
+    func presentShareSheet() {
+        let shareInfo = ShareSheet.getShareSheet()
+        let image = UIImage(named: shareInfo.image) ?? UIImage()
+        let items: [Any] = [shareInfo.title, image]
+        
+        let shareSheet = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        shareSheet.popoverPresentationController?.sourceView = self.view
+        present(shareSheet, animated: true, completion: nil)
+    }
+}
