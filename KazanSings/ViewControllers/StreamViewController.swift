@@ -12,7 +12,7 @@ final class StreamViewController: UIViewController {
     
     @IBOutlet private var playButton: UIButton!
     
-    let commandCenter = MPRemoteCommandCenter.shared()
+    private let commandCenter = MPRemoteCommandCenter.shared()
     private var player: AVPlayer!
     
     override func viewDidLoad() {
@@ -38,26 +38,13 @@ final class StreamViewController: UIViewController {
             self?.playButton.setImage(UIImage(named: "playbutton"), for: .normal)
             return .success
         }
-    
-    }
-    
-    @IBAction private func playButtonPressed() {
-        if player.timeControlStatus == .playing {
-//            try! AVAudioSession.sharedInstance().setActive(false)
-            player.pause()
-            playButton.setImage(UIImage(named: "playbutton"), for: .normal)
-        } else {
-//            try! AVAudioSession.sharedInstance().setActive(true)
-            player.play()
-            playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
-        }
         
-        updateNowPlayingInfo()
-    }
         
-    private func updateNowPlayingInfo() {
+        
+        
+        
         var nowPlayingInfo = [String: Any]()
-        nowPlayingInfo[MPMediaItemPropertyTitle] = "Казань поет"
+        nowPlayingInfo[MPMediaItemPropertyTitle] = "Казань Поёт"
         nowPlayingInfo[MPMediaItemPropertyArtist] = "Радио - Прямой эфир"
         
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
@@ -68,7 +55,24 @@ final class StreamViewController: UIViewController {
             }
             MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPMediaItemPropertyArtwork] = artwork
         }
+    
     }
+    
+    @IBAction private func playButtonPressed() {
+        if player.timeControlStatus == .playing {
+            try! AVAudioSession.sharedInstance().setActive(false)
+            player.pause()
+            playButton.setImage(UIImage(named: "playbutton"), for: .normal)
+        } else {
+            try! AVAudioSession.sharedInstance().setActive(true)
+            player.play()
+            playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
+        }
+        
+//        updateNowPlayingInfo()
+    }
+        
+
 }
 
  // MARK: - ShareSheet
