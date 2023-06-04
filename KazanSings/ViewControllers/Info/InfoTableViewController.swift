@@ -15,7 +15,7 @@ final class InfoTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = view.frame.height / 14
     }
-
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         infoList.count
@@ -34,11 +34,11 @@ final class InfoTableViewController: UITableViewController {
         
         return headerView
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return infoList[section].titles.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let imageName = infoList[indexPath.section].imageNames[indexPath.row]
         let titleName = infoList[indexPath.section].titles[indexPath.row]
@@ -50,8 +50,8 @@ final class InfoTableViewController: UITableViewController {
         switch indexPath.section {
         case 0...infoList.count - 2:
             let selectedView = UIView()
-                selectedView.backgroundColor = UIColor(named: "CellColor")
-                cell.selectedBackgroundView = selectedView
+            selectedView.backgroundColor = UIColor(named: "CellColor")
+            cell.selectedBackgroundView = selectedView
             
             if infoList[indexPath.section].segueIDs?[indexPath.row] != nil {
                 let image = UIImage(systemName: "chevron.right") ?? UIImage()
@@ -94,7 +94,7 @@ final class InfoTableViewController: UITableViewController {
         switch indexPath.section {
         case 0 where indexPath.row != 1:
             guard let url = URL(string: link) else { return }
-//            UIApplication.shared.open(url)
+            //            UIApplication.shared.open(url)
             
             
             showOkAlert(title: title, message: link) { _ in
@@ -106,26 +106,12 @@ final class InfoTableViewController: UITableViewController {
             break
         }
     }
-   
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showAboutUs" {
+//            guard let aboutUsVC = segue.destination as? AboutUsViewController else { return }
+//            aboutUsVC.shareAboutUs()
+//        }
+//    }
 }

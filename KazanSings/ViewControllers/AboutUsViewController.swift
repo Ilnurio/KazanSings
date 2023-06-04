@@ -19,7 +19,7 @@ final class AboutUsViewController: UIViewController {
 }
 
 extension AboutUsViewController {
-    private func shareAboutUs() {
+    func shareAboutUs() {
         let aboutUs = AboutUs.getAboutUs()
         aboutUsLabel.text = aboutUs.title
     }
