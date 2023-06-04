@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		460F80332A2BFD6F00F7A55B /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460F80322A2BFD6F00F7A55B /* ShareSheet.swift */; };
 		468B39D72A2D24F9004E0017 /* AboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B39D62A2D24F9004E0017 /* AboutApp.swift */; };
+		468B39D92A2D266E004E0017 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B39D82A2D266E004E0017 /* AboutUsViewController.swift */; };
 		469975122A27CA2D005231CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469975112A27CA2D005231CC /* AppDelegate.swift */; };
 		469975142A27CA2D005231CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469975132A27CA2D005231CC /* SceneDelegate.swift */; };
 		469975192A27CA2D005231CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469975172A27CA2D005231CC /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		460F80322A2BFD6F00F7A55B /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		468B39D62A2D24F9004E0017 /* AboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApp.swift; sourceTree = "<group>"; };
+		468B39D82A2D266E004E0017 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		4699750E2A27CA2D005231CC /* KazanSings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KazanSings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469975112A27CA2D005231CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469975132A27CA2D005231CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				4C94415F2A28C36C0069F70E /* StreamViewController.swift */,
 				4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */,
 				4C69ABC82A2CB35D009F00CB /* TimerViewController.swift */,
+				468B39D82A2D266E004E0017 /* AboutUsViewController.swift */,
 				4CB515DB2A2C11F900F9E4EC /* Info */,
 				4CB515DC2A2C121F00F9E4EC /* Extensions */,
 			);
@@ -222,6 +225,7 @@
 				4C69ABC92A2CB35D009F00CB /* TimerViewController.swift in Sources */,
 				4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */,
 				469975122A27CA2D005231CC /* AppDelegate.swift in Sources */,
+				468B39D92A2D266E004E0017 /* AboutUsViewController.swift in Sources */,
 				4CB515D82A2BEC7400F9E4EC /* Ext + Alert.swift in Sources */,
 				4C9441622A28C3AE0069F70E /* BaseNavigationController.swift in Sources */,
 				4C48AA202A2A1B38003DABA5 /* InfoTableViewController.swift in Sources */,
