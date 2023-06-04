@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		460F80332A2BFD6F00F7A55B /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460F80322A2BFD6F00F7A55B /* ShareSheet.swift */; };
+		468B39D72A2D24F9004E0017 /* AboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B39D62A2D24F9004E0017 /* AboutApp.swift */; };
 		469975122A27CA2D005231CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469975112A27CA2D005231CC /* AppDelegate.swift */; };
 		469975142A27CA2D005231CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469975132A27CA2D005231CC /* SceneDelegate.swift */; };
 		469975192A27CA2D005231CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469975172A27CA2D005231CC /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		460F80322A2BFD6F00F7A55B /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		468B39D62A2D24F9004E0017 /* AboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApp.swift; sourceTree = "<group>"; };
 		4699750E2A27CA2D005231CC /* KazanSings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KazanSings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469975112A27CA2D005231CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469975132A27CA2D005231CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				4C39C18B2A27D4CB00A71265 /* InfoList.swift */,
 				460F80322A2BFD6F00F7A55B /* ShareSheet.swift */,
+				468B39D62A2D24F9004E0017 /* AboutApp.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468B39D72A2D24F9004E0017 /* AboutApp.swift in Sources */,
 				4C69ABC92A2CB35D009F00CB /* TimerViewController.swift in Sources */,
 				4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */,
 				469975122A27CA2D005231CC /* AppDelegate.swift in Sources */,
