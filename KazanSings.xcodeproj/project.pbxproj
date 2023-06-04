@@ -101,9 +101,8 @@
 			children = (
 				4C94415F2A28C36C0069F70E /* StreamViewController.swift */,
 				4C9441612A28C3AE0069F70E /* BaseNavigationController.swift */,
-				4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */,
-				4CB515D92A2C0E5600F9E4EC /* Mail Ext + InfoTableVC.swift */,
-				4CB515D72A2BEC7400F9E4EC /* Ext + Alert.swift */,
+				4CB515DB2A2C11F900F9E4EC /* Info */,
+				4CB515DC2A2C121F00F9E4EC /* Extensions */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -123,6 +122,23 @@
 				460F80322A2BFD6F00F7A55B /* ShareSheet.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4CB515DB2A2C11F900F9E4EC /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */,
+				4CB515D92A2C0E5600F9E4EC /* Mail Ext + InfoTableVC.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		4CB515DC2A2C121F00F9E4EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4CB515D72A2BEC7400F9E4EC /* Ext + Alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

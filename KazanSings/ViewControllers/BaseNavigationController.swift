@@ -20,8 +20,8 @@ final class BaseNavigationController: UINavigationController {
             .font: UIFont.boldSystemFont(ofSize: 20)
         ]
         
-        navigationBar.scrollEdgeAppearance = navBarAppearance
         navigationBar.standardAppearance = navBarAppearance
+        navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
 }

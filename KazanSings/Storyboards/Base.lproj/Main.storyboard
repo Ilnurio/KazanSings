@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Казань Поет-->
+        <!--Казань Поёт-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="StreamViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +72,8 @@
                             <constraint firstItem="88L-aH-UvS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="vhq-21-vNQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Казань Поет" id="SLG-Ln-gPp">
+                    <navigationItem key="navigationItem" title="Казань Поёт" id="SLG-Ln-gPp">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="V1f-Kx-6EE"/>
                         <barButtonItem key="leftBarButtonItem" image="info.circle" catalog="system" id="Xlj-oL-p9k">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -142,6 +143,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G9s-3T-Pcg">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
