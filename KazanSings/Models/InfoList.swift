@@ -71,7 +71,7 @@ extension InfoList {
                          "Политика конфиденциальности",
                          "Правила и условия"],
                 imageNames: ["star.fill",
-                             "list.clipboard",
+                             "list.bullet.clipboard",
                              "list.bullet.rectangle.fill"],
                 segueIDs: [nil,
                            "showPolicy",
@@ -83,37 +83,6 @@ extension InfoList {
                 imageNames: [""]
             )
         ]
-        
-        
-        
-        
-        
-        
-        
-        
-//        [
-//            InfoList(
-//                header: "Контакты",
-//                title: "Контакты",
-//                imageName: "person.circle.fill",
-//                segueID: "showContact"
-//            ),
-//            InfoList(
-//                title: "О нас",
-//                imageName: "info.bubble.fill",
-//                segueID: "showAboutUs"
-//            ),
-//            InfoList(
-//                title: "Политика конфиденциальности",
-//                imageName: "list.clipboard",
-//                segueID: "showPolicy"
-//            ),
-//            InfoList(
-//                title: "Правила",
-//                imageName: "list.bullet.rectangle.fill",
-//                segueID: "showRules"
-//            )
-//        ]
     }
 }
 
