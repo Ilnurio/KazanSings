@@ -71,7 +71,7 @@ extension InfoList {
                          "Политика конфиденциальности",
                          "Правила и условия"],
                 imageNames: ["star.fill",
-                             "list.bullet.clipboard",
+                             "list.bullet.rectangle.fill",
                              "list.bullet.rectangle.fill"],
                 segueIDs: [nil,
                            "showPolicy",
