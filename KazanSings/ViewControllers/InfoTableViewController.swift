@@ -45,6 +45,7 @@ final class InfoTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
+        content.imageProperties.tintColor = .white
         
         switch indexPath.section {
         case 0...infoList.count - 2:
@@ -100,7 +101,7 @@ final class InfoTableViewController: UITableViewController {
                 UIApplication.shared.open(url)
             }
         case 0 where indexPath.row == 1:
-            break
+            sendMail(mail: [link], subject: "Пользователь «Казань Поёт»")
         default:
             break
         }
