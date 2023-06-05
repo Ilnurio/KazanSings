@@ -258,6 +258,34 @@
             </objects>
             <point key="canvasLocation" x="2290" y="-15"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="kzg-hC-WZl">
+            <objects>
+                <tableViewController id="ktp-VU-81b" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="f2L-PS-2g4">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="94" id="edC-XZ-MCn">
+                                <rect key="frame" x="0.0" y="50" width="430" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="edC-XZ-MCn" id="u39-En-gzt">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ktp-VU-81b" id="Kvj-Yb-jYr"/>
+                            <outlet property="delegate" destination="ktp-VU-81b" id="h6L-Yp-T7M"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVh-QH-LWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3195" y="-180"/>
+        </scene>
         <!--About App View Controller-->
         <scene sceneID="JIq-36-wl0">
             <objects>
@@ -315,7 +343,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HgP-3f-gJ4"/>
                     <connections>
-                        <outlet property="aboutUsLabel" destination="pNR-8u-j3d" id="w3y-ZX-034"/>
+                        <outlet property="aboutAppLabel" destination="pNR-8u-j3d" id="w3y-ZX-034"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Su6-5n-fcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -359,6 +387,9 @@
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

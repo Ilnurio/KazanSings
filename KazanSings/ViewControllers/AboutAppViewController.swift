@@ -9,18 +9,18 @@ import UIKit
 
 final class AboutAppViewController: UIViewController {
     
-    @IBOutlet var aboutUsLabel: UILabel!
+    @IBOutlet var aboutAppLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        shareAboutUs()
+        shareAboutApp()
     }
 }
 
 extension AboutAppViewController {
-    func shareAboutUs() {
-        let aboutUs = AboutUs.getAboutUs()
-        aboutUsLabel.text = aboutUs.title
+    func shareAboutApp() {
+        let aboutApp = AboutApp.getAboutUs()
+        aboutAppLabel.text = aboutApp.title
     }
 }
