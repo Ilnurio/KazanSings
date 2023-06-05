@@ -20,10 +20,17 @@ final class TimerManager: ObservableObject {
         didSet {
             let formatter = DateFormatter()
             formatter.dateFormat = "hh:mm:ss"
+            
             let formattedTime = formatter.string(
                 from: Date(timeIntervalSince1970: remainingTime)
             )
+            
             timeString = formattedTime
+            
+//             Время окончания таймера (на будущее)
+//            let formattedTime = formatter.string(
+//                from: Date().advanced(by: remainingTime)
+//            )
         }
     }
     

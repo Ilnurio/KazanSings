@@ -112,9 +112,9 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b22-ID-vDP">
                                 <rect key="frame" x="20" y="206.66666666666663" width="390" height="232"/>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuC-Yi-aSf">
-                                <rect key="frame" x="30" y="309" width="370" height="27.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:34:58" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="PuC-Yi-aSf">
+                                <rect key="frame" x="80" y="302.33333333333331" width="270" height="41"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -185,7 +185,7 @@
                         <viewLayoutGuide key="safeArea" id="D44-7a-rbq"/>
                         <color key="backgroundColor" name="PopOverColor"/>
                         <constraints>
-                            <constraint firstItem="PuC-Yi-aSf" firstAttribute="leading" secondItem="D44-7a-rbq" secondAttribute="leading" constant="30" id="2dH-Ba-jFO"/>
+                            <constraint firstItem="PuC-Yi-aSf" firstAttribute="leading" secondItem="D44-7a-rbq" secondAttribute="leading" constant="80" id="2dH-Ba-jFO"/>
                             <constraint firstItem="b22-ID-vDP" firstAttribute="centerY" secondItem="Rfg-7f-u0P" secondAttribute="centerY" multiplier="0.7" id="5Mj-K4-qc0"/>
                             <constraint firstItem="PuC-Yi-aSf" firstAttribute="centerY" secondItem="Rfg-7f-u0P" secondAttribute="centerY" multiplier="0.7" id="AYR-XR-BHm"/>
                             <constraint firstItem="D44-7a-rbq" firstAttribute="trailing" secondItem="b22-ID-vDP" secondAttribute="trailing" constant="20" id="AhY-Mc-xS3"/>
@@ -196,7 +196,7 @@
                             <constraint firstItem="0R3-qt-Zzu" firstAttribute="centerY" secondItem="Rfg-7f-u0P" secondAttribute="centerY" multiplier="1.3" id="JK2-QJ-WEb"/>
                             <constraint firstItem="0R3-qt-Zzu" firstAttribute="leading" secondItem="D44-7a-rbq" secondAttribute="leading" constant="20" id="Lqr-RH-4zE"/>
                             <constraint firstItem="aSQ-Ie-FeP" firstAttribute="height" secondItem="Rfg-7f-u0P" secondAttribute="height" multiplier="0.0607375" id="Lyd-5O-fdp"/>
-                            <constraint firstItem="D44-7a-rbq" firstAttribute="trailing" secondItem="PuC-Yi-aSf" secondAttribute="trailing" constant="30" id="Ot4-di-han"/>
+                            <constraint firstItem="D44-7a-rbq" firstAttribute="trailing" secondItem="PuC-Yi-aSf" secondAttribute="trailing" constant="80" id="Ot4-di-han"/>
                             <constraint firstItem="aSQ-Ie-FeP" firstAttribute="top" secondItem="D44-7a-rbq" secondAttribute="top" constant="40" id="PlM-IL-r2Z"/>
                             <constraint firstItem="D44-7a-rbq" firstAttribute="trailing" secondItem="4O7-BZ-ekp" secondAttribute="trailing" constant="20" id="UbO-Fu-EMy"/>
                             <constraint firstItem="b22-ID-vDP" firstAttribute="height" secondItem="Rfg-7f-u0P" secondAttribute="height" multiplier="0.251627" id="fD9-qW-2xU"/>
