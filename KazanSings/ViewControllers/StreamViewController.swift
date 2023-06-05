@@ -31,13 +31,33 @@ final class StreamViewController: UIViewController {
         }
     }
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "status" {
+            switch player.status {
+            case .readyToPlay:
+               
+                print(" Player is ready to play. You might want to start playing here")
+                break
+            case .failed:
+                print("Player has failed with error: \(String(describing: player.error))")
+                break
+            case .unknown:
+                print("Player has failed with error: \(String(describing: player.error))")
+                break
+            @unknown default:
+                print("Player has failed with error: \(String(describing: player.error))")
+                fatalError()
+            }
+        }
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         player = AVPlayer(url: URL(string: "https://stream01.hitv.ru:8443/kazansings-320kb")!)
+        player.currentItem?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
         bindTimer()
         
         do {
@@ -46,6 +66,11 @@ final class StreamViewController: UIViewController {
         } catch {
             print("Ошибка настройки аудиосессии: \(error.localizedDescription)")
         }
+//
+        
+
+        
+
         
         commandCenter.playCommand.addTarget { [weak self] _ in
             self?.player.play()
@@ -73,6 +98,10 @@ final class StreamViewController: UIViewController {
             MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPMediaItemPropertyArtwork] = artwork
         }
     
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("I disappear")
     }
     
     private func pausePlayer() {
