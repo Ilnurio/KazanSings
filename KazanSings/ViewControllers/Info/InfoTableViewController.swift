@@ -98,20 +98,13 @@ final class InfoTableViewController: UITableViewController {
             }
         case 0 where indexPath.row == 1:
             sendMail(mail: [link], subject: "Пользователь «Казань Поёт»")
-        case 0 where indexPath.row == 5:
-            performSegue(withIdentifier: "showAboutUs", sender: nil)
+        case 1:
+            performSegue(
+                withIdentifier: infoList[indexPath.section].segueIDs?[indexPath.row] ?? "",
+                sender: nil
+            )
         default:
             break
-        }
-//        if indexPath.row == 5 {
-//            performSegue(withIdentifier: "showAboutUs", sender: nil)
-//        }
-    }
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showAboutUs" {
-            let aboutUsVC = segue.destination as? AboutAppViewController
         }
     }
 }

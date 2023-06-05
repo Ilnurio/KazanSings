@@ -35,7 +35,6 @@ extension UIViewController {
             sleep(2)
             self.dismiss(animated: true)
         }
-        
     }
     
     func showOkAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)? = nil) {
