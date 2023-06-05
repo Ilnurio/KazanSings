@@ -81,10 +81,6 @@ final class InfoTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -102,16 +98,20 @@ final class InfoTableViewController: UITableViewController {
             }
         case 0 where indexPath.row == 1:
             sendMail(mail: [link], subject: "Пользователь «Казань Поёт»")
+        case 0 where indexPath.row == 5:
+            performSegue(withIdentifier: "showAboutUs", sender: nil)
         default:
             break
         }
+//        if indexPath.row == 5 {
+//            performSegue(withIdentifier: "showAboutUs", sender: nil)
+//        }
     }
     
     // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showAboutUs" {
-//            guard let aboutUsVC = segue.destination as? AboutUsViewController else { return }
-//            aboutUsVC.shareAboutUs()
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAboutUs" {
+            let aboutUsVC = segue.destination as? AboutAppViewController
+        }
+    }
 }

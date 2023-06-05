@@ -60,10 +60,6 @@ final class StreamViewController: UIViewController {
             return .success
         }
         
-        
-        
-        
-        
         var nowPlayingInfo = [String: Any]()
         nowPlayingInfo[MPMediaItemPropertyTitle] = "Казань Поёт"
         nowPlayingInfo[MPMediaItemPropertyArtist] = "Радио - Прямой эфир"

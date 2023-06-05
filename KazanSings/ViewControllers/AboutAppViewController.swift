@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AboutUsViewController: UIViewController {
+final class AboutAppViewController: UIViewController {
     
     @IBOutlet var aboutUsLabel: UILabel!
     
@@ -18,7 +18,7 @@ final class AboutUsViewController: UIViewController {
     }
 }
 
-extension AboutUsViewController {
+extension AboutAppViewController {
     func shareAboutUs() {
         let aboutUs = AboutUs.getAboutUs()
         aboutUsLabel.text = aboutUs.title
