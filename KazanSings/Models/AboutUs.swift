@@ -21,7 +21,7 @@ extension AboutUs {
             statusInTeam: "Tимлид"),
          AboutUs(
             imageName: "programmerone",
-            nameSurName: "Михаил ",
+            nameSurName: "Михаил Батуми",
             statusInTeam: "IOS Разработчик"),
          AboutUs(
             imageName: "programmertwo",
