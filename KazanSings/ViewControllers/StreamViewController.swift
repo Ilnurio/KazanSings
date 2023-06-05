@@ -7,17 +7,38 @@
 
 import UIKit
 import MediaPlayer
+import Combine
 
 final class StreamViewController: UIViewController {
     
     @IBOutlet private var playButton: UIButton!
+    @IBOutlet private var timerButton: UIButton!
     
     private let commandCenter = MPRemoteCommandCenter.shared()
     private var player: AVPlayer!
     
+    private let timerManager = TimerManager.shared
+    private var cancelables: Set<AnyCancellable> = []
+    
+    private var timer: Timer? {
+        didSet {
+            if timer == nil {
+                pausePlayer()
+                timerButton.tintColor = .white
+            } else {
+                timerButton.tintColor = .yellow
+            }
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         player = AVPlayer(url: URL(string: "https://stream01.hitv.ru:8443/kazansings-320kb")!)
+        bindTimer()
         
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
@@ -58,11 +79,15 @@ final class StreamViewController: UIViewController {
     
     }
     
+    private func pausePlayer() {
+        try! AVAudioSession.sharedInstance().setActive(false)
+        player.pause()
+        playButton.setImage(UIImage(named: "playbutton"), for: .normal)
+    }
+    
     @IBAction private func playButtonPressed() {
         if player.timeControlStatus == .playing {
-            try! AVAudioSession.sharedInstance().setActive(false)
-            player.pause()
-            playButton.setImage(UIImage(named: "playbutton"), for: .normal)
+            pausePlayer()
         } else {
             try! AVAudioSession.sharedInstance().setActive(true)
             player.play()
@@ -90,5 +115,16 @@ extension StreamViewController {
         let shareSheet = UIActivityViewController(activityItems: items, applicationActivities: nil)
         shareSheet.popoverPresentationController?.sourceView = self.view
         present(shareSheet, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Extension for Binding
+extension StreamViewController {
+    private func bindTimer() {
+        timerManager.$timer
+            .sink { [weak self] timer in
+                self?.timer = timer
+            }
+            .store(in: &cancelables)
     }
 }

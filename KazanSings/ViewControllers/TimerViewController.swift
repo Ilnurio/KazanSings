@@ -6,34 +6,30 @@
 //
 
 import UIKit
+import Combine
 
 final class TimerViewController: UIViewController {
     
-    private var timer: Timer?
-    private var remainingTime: TimeInterval = 0 {
-        didSet {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "hh:mm:ss"
-            let formattedTime = formatter.string(
-                from: Date(timeIntervalSince1970: remainingTime)
-            )
-            timeLabel.text = formattedTime
-            print(formattedTime) // Убрать
-        }
-    }
-    
-    let timerData = TimerData.shared
-    @IBOutlet var MYLABEL: UILabel!
-    
+    // MARK: - IB Outlets
     @IBOutlet private var backButton: UIButton!
     @IBOutlet private var timeLabel: UILabel!
     @IBOutlet private var timerPicker: UIDatePicker!
     @IBOutlet private var startButton: UIButton!
     
+    // MARK: - Private Properties
+    private let timerManager = TimerManager.shared
+    private var cancelables: Set<AnyCancellable> = []
+    private var timer: Timer? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindTimer()
         timerPicker.setValue(UIColor.white, forKeyPath: "textColor")
-        timeLabel.alpha = 0
     }
     
     override func viewWillLayoutSubviews() {
@@ -41,60 +37,53 @@ final class TimerViewController: UIViewController {
         backButton.layer.cornerRadius = backButton.frame.height / 2
     }
     
+    // MARK: - IB Actions
     @IBAction private func backButtonPressed() {
         dismiss(animated: true)
     }
     
     @IBAction private func startButtonPressed() {
         if timer == nil {
-            startTimer()
+            timerManager.start(picker: timerPicker.countDownDuration)
         } else {
-            stopTimer()
+            timerManager.stop()
         }
         updateViews()
     }
     
-    private func startTimer() {
-        remainingTime = timerPicker.countDownDuration
-        DispatchQueue.global().sync { [weak self] in
-            self?.timer = Timer.scheduledTimer(
-                timeInterval: 1,
-                target: self as Any,
-                selector: #selector(self?.updateTimer),
-                userInfo: nil,
-                repeats: true
-            )
-        }
-    }
-    
-    private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
-    
+    // MARK: - Private Methods
     private func updateViews() {
         if timer != nil {
             startButton.setTitle("Завершить", for: .normal)
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.2) {
                 self.timerPicker.alpha = 0
                 self.timeLabel.alpha = 1
                 self.startButton.backgroundColor = UIColor(named: "TimerRed")
             }
         } else {
             startButton.setTitle("Старт", for: .normal)
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.2) {
                 self.timerPicker.alpha = 1
                 self.timeLabel.alpha = 0
                 self.startButton.backgroundColor = UIColor(named: "MainColor")
             }
         }
     }
-    
-    @objc private func updateTimer() {
-        if remainingTime > 0 {
-            remainingTime -= 1
-        } else {
-            stopTimer()
-        }
+}
+
+// MARK: - Extension for Binding
+extension TimerViewController {
+    private func bindTimer() {
+        timerManager.$timeString
+            .sink { [weak self] newText in
+                self?.timeLabel.text = newText
+            }
+            .store(in: &cancelables)
+        
+        timerManager.$timer
+            .sink { [weak self] timer in
+                self?.timer = timer
+            }
+            .store(in: &cancelables)
     }
 }
