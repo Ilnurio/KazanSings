@@ -16,23 +16,52 @@ final class TimerManager: ObservableObject {
     @Published var timeString = ""
     
     // MARK: - Private Properties
+//    private var remainingTime: TimeInterval = 0 {
+//        didSet {
+//            let formatter = DateFormatter()
+//            formatter.dateFormat = "hh:mm:ss"
+//
+//            let formattedTime = formatter.string(
+//                from: Date(timeIntervalSince1970: remainingTime)
+//            )
+//
+//            timeString = formattedTime
+//
+////             Время окончания таймера (на будущее)
+////            let formattedTime = formatter.string(
+////                from: Date().advanced(by: remainingTime)
+////            )
+//        }
+//    }
+    
+//    private var remainingTime: TimeInterval = 0 {
+//        didSet {
+//            timeString = timeStringFromTimeInterval(remainingTime)
+//        }
+//    }
+//
+//    private func timeStringFromTimeInterval(_ interval: TimeInterval) -> String {
+//        let totalSeconds = Int(interval)
+//
+//        let hours = totalSeconds / 3600
+//        let minutes = (totalSeconds % 3600) / 60
+//        let seconds = totalSeconds % 60
+//
+//        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+//    }
+    
     private var remainingTime: TimeInterval = 0 {
         didSet {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "hh:mm:ss"
-            
-            let formattedTime = formatter.string(
-                from: Date(timeIntervalSince1970: remainingTime)
-            )
-            
-            timeString = formattedTime
-            
-//             Время окончания таймера (на будущее)
-//            let formattedTime = formatter.string(
-//                from: Date().advanced(by: remainingTime)
-//            )
+            let formatter = DateComponentsFormatter()
+            formatter.allowedUnits = [.hour, .minute, .second]
+//            formatter.zeroFormattingBehavior = .pad
+            if let formattedTime = formatter.string(from: remainingTime) {
+                timeString = formattedTime
+            }
         }
     }
+
+
     
     // MARK: - Initializers
     private init() {}
