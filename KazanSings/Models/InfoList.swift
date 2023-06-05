@@ -14,8 +14,6 @@ struct InfoList {
     
     var segueIDs: [String?]?
     var links: [String]?
-    var descriptions: [String]?
-    var otherImages: [String]?
 }
 
 extension InfoList {

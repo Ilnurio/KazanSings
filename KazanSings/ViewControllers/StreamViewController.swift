@@ -31,25 +31,25 @@ final class StreamViewController: UIViewController {
         }
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "status" {
-            switch player.status {
-            case .readyToPlay:
-               
-                print(" Player is ready to play. You might want to start playing here")
-                break
-            case .failed:
-                print("Player has failed with error: \(String(describing: player.error))")
-                break
-            case .unknown:
-                print("Player has failed with error: \(String(describing: player.error))")
-                break
-            @unknown default:
-                print("Player has failed with error: \(String(describing: player.error))")
-                fatalError()
-            }
-        }
-    }
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if keyPath == "status" {
+//            switch player.status {
+//            case .readyToPlay:
+//
+//                print(" Player is ready to play. You might want to start playing here")
+//                break
+//            case .failed:
+//                print("Player has failed with error: \(String(describing: player.error))")
+//                break
+//            case .unknown:
+//                print("Player has failed with error: \(String(describing: player.error))")
+//                break
+//            @unknown default:
+//                print("Player has failed with error: \(String(describing: player.error))")
+//                fatalError()
+//            }
+//        }
+//    }
     
     
     
@@ -57,12 +57,12 @@ final class StreamViewController: UIViewController {
         super.viewDidLoad()
         
         player = AVPlayer(url: URL(string: "https://stream01.hitv.ru:8443/kazansings-320kb")!)
-        player.currentItem?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
+//        player.currentItem?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
         bindTimer()
         
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            //try AVAudioSession.sharedInstance().setActive(true)
+            try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print("Ошибка настройки аудиосессии: \(error.localizedDescription)")
         }
