@@ -62,7 +62,7 @@ final class StreamViewController: UIViewController {
         
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            try AVAudioSession.sharedInstance().setActive(true)
+//            try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print("Ошибка настройки аудиосессии: \(error.localizedDescription)")
         }
@@ -105,7 +105,7 @@ final class StreamViewController: UIViewController {
     }
     
     private func pausePlayer() {
-        try! AVAudioSession.sharedInstance().setActive(false)
+//        try! AVAudioSession.sharedInstance().setActive(false)
         player.pause()
         playButton.setImage(UIImage(named: "playbutton"), for: .normal)
     }
