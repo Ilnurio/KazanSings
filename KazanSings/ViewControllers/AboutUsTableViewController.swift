@@ -13,21 +13,27 @@ final class AboutUsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.rowHeight = 100
     }
 
     // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        aboutUs.count
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        aboutUs[section].nameSurName.count
+        aboutUs.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
-
+        var content = cell.defaultContentConfiguration()
+        let aboutUs = aboutUs[indexPath.row]
+        content.text = aboutUs.nameSurName
+        content.secondaryText = aboutUs.statusInTeam
+        content.textProperties.color = .white
+        content.image = UIImage(named: aboutUs.imageName)
+        content.imageProperties.cornerRadius = tableView.rowHeight / 2
+        content.imageProperties.tintColor = .white
+        cell.separatorInset.left = view.frame.width
+        cell.contentConfiguration = content
+        
         return cell
     }
 

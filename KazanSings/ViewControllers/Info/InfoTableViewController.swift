@@ -48,7 +48,7 @@ final class InfoTableViewController: UITableViewController {
         content.imageProperties.tintColor = .white
         
         switch indexPath.section {
-        case 0...infoList.count - 2:
+        case 0...infoList.count - 2: 
             let selectedView = UIView()
             selectedView.backgroundColor = UIColor(named: "CellColor")
             cell.selectedBackgroundView = selectedView

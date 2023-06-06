@@ -268,7 +268,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="MainColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" textLabel="Ymn-kk-Pxb" detailTextLabel="Lf3-D9-76d" imageView="t9u-nM-05m" rowHeight="126" style="IBUITableViewCellStyleSubtitle" id="edC-XZ-MCn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="personCell" textLabel="Ymn-kk-Pxb" detailTextLabel="xmp-A2-EKa" imageView="t9u-nM-05m" rowHeight="126" style="IBUITableViewCellStyleSubtitle" id="edC-XZ-MCn">
                                 <rect key="frame" x="0.0" y="50" width="430" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="edC-XZ-MCn" id="u39-En-gzt">
@@ -276,16 +276,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="NameSurName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ymn-kk-Pxb">
-                                            <rect key="frame" x="167.66666666666666" y="41" width="123" height="20.333333333333332"/>
+                                            <rect key="frame" x="167.66666666666666" y="47" width="85" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lf3-D9-76d">
-                                            <rect key="frame" x="167.66666666666666" y="64.333333333333329" width="51.333333333333336" height="17.666666666666668"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -293,6 +286,13 @@
                                             <rect key="frame" x="20" y="0.0" width="132.66666666666666" height="126"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xmp-A2-EKa">
+                                            <rect key="frame" x="167.66666666666666" y="63.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="MainColor"/>
@@ -304,10 +304,29 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Команда" id="s9w-hD-cRb"/>
+                    <connections>
+                        <segue destination="t3D-IN-z44" kind="show" identifier="showAboutFounder" id="yih-xf-sEw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVh-QH-LWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3204" y="-363"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XK4-7l-6lM">
+            <objects>
+                <viewController id="t3D-IN-z44" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iTv-8i-mYn">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qPX-KY-pbs"/>
+                        <color key="backgroundColor" name="MainColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lQI-jI-HuH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCk-qM-Vxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4077" y="-363"/>
         </scene>
         <!--О нас-->
         <scene sceneID="JIq-36-wl0">

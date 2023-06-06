@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		460F80332A2BFD6F00F7A55B /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460F80322A2BFD6F00F7A55B /* ShareSheet.swift */; };
+		464270E22A2F28D700ED6333 /* AboutFounderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464270E12A2F28D700ED6333 /* AboutFounderViewController.swift */; };
 		466F96A02A2E638A009279C6 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F969F2A2E638A009279C6 /* AboutUs.swift */; };
 		466F96A22A2E69D6009279C6 /* AboutUsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F96A12A2E69D6009279C6 /* AboutUsTableViewController.swift */; };
 		468B39D72A2D24F9004E0017 /* AboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B39D62A2D24F9004E0017 /* AboutApp.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		460F80322A2BFD6F00F7A55B /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		464270E12A2F28D700ED6333 /* AboutFounderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFounderViewController.swift; sourceTree = "<group>"; };
 		466F969F2A2E638A009279C6 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
 		466F96A12A2E69D6009279C6 /* AboutUsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsTableViewController.swift; sourceTree = "<group>"; };
 		468B39D62A2D24F9004E0017 /* AboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApp.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				4C69ABC82A2CB35D009F00CB /* TimerViewController.swift */,
 				4CB515DB2A2C11F900F9E4EC /* Info */,
 				4CB515DC2A2C121F00F9E4EC /* Extensions */,
+				464270E12A2F28D700ED6333 /* AboutFounderViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464270E22A2F28D700ED6333 /* AboutFounderViewController.swift in Sources */,
 				468B39D72A2D24F9004E0017 /* AboutApp.swift in Sources */,
 				4C69ABC92A2CB35D009F00CB /* TimerViewController.swift in Sources */,
 				4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */,
