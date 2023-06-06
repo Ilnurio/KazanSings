@@ -68,7 +68,11 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
         content.text = bitRate[indexPath.row].title
         content.secondaryText = bitRate[indexPath.row].description
         
-                
+        let curLink = BitRateManager.shared.currentLink
+        if bitRate[indexPath.row].link == curLink {
+            cell.accessoryType = .checkmark
+        }
+        
         cell.contentConfiguration = content
         return cell
     }
@@ -84,6 +88,8 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
+        BitRateManager.shared.currentLink = bitRate[indexPath.row].link
+        print(BitRateManager.shared.currentLink)
         
     }
     

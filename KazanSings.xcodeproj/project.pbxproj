@@ -21,6 +21,7 @@
 		4C1038452A2DC272006A2C08 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1038442A2DC272006A2C08 /* TimerManager.swift */; };
 		4C2C4FF72A2F603D0030C24C /* BitRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C4FF62A2F603D0030C24C /* BitRate.swift */; };
 		4C2C4FF92A2F7F0F0030C24C /* BitRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C4FF82A2F7F0F0030C24C /* BitRateViewController.swift */; };
+		4C2C4FFB2A2F9D0B0030C24C /* BitRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C4FFA2A2F9D0B0030C24C /* BitRateManager.swift */; };
 		4C39C18C2A27D4CB00A71265 /* InfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39C18B2A27D4CB00A71265 /* InfoList.swift */; };
 		4C48AA202A2A1B38003DABA5 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */; };
 		4C69ABC92A2CB35D009F00CB /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69ABC82A2CB35D009F00CB /* TimerViewController.swift */; };
@@ -47,6 +48,7 @@
 		4C1038442A2DC272006A2C08 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		4C2C4FF62A2F603D0030C24C /* BitRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitRate.swift; sourceTree = "<group>"; };
 		4C2C4FF82A2F7F0F0030C24C /* BitRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitRateViewController.swift; sourceTree = "<group>"; };
+		4C2C4FFA2A2F9D0B0030C24C /* BitRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitRateManager.swift; sourceTree = "<group>"; };
 		4C39C18B2A27D4CB00A71265 /* InfoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoList.swift; sourceTree = "<group>"; };
 		4C48AA1F2A2A1B38003DABA5 /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		4C69ABC82A2CB35D009F00CB /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				4C1038442A2DC272006A2C08 /* TimerManager.swift */,
+				4C2C4FFA2A2F9D0B0030C24C /* BitRateManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				468B39D72A2D24F9004E0017 /* AboutApp.swift in Sources */,
 				4C69ABC92A2CB35D009F00CB /* TimerViewController.swift in Sources */,
 				4C9441602A28C36C0069F70E /* StreamViewController.swift in Sources */,
+				4C2C4FFB2A2F9D0B0030C24C /* BitRateManager.swift in Sources */,
 				4C2C4FF72A2F603D0030C24C /* BitRate.swift in Sources */,
 				469975122A27CA2D005231CC /* AppDelegate.swift in Sources */,
 				468B39D92A2D266E004E0017 /* AboutAppViewController.swift in Sources */,
