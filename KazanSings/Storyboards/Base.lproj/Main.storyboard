@@ -208,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpz-bV-QRs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766.04651162790697" y="790.55793991416317"/>
+            <point key="canvasLocation" x="1002" y="715"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="iol-RN-mvV">
@@ -322,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoU-VJ-NHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2131" y="791"/>
+            <point key="canvasLocation" x="1758" y="715"/>
         </scene>
         <!--Инфо-->
         <scene sceneID="A3v-KC-dlt">
