@@ -29,7 +29,7 @@ final class StreamViewController: UIViewController {
             } else if timer == nil {
                 timerButton.tintColor = .white
             } else {
-                timerButton.tintColor = .yellow
+                timerButton.tintColor = .cyan
             }
         }
     }
@@ -116,10 +116,13 @@ final class StreamViewController: UIViewController {
     @IBAction private func playButtonPressed() {
         if player.timeControlStatus == .playing {
             pausePlayer()
+            timerButton.isEnabled = false
+            timerManager.stop()
         } else {
             try! AVAudioSession.sharedInstance().setActive(true)
             player.play()
             playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
+            timerButton.isEnabled = true
         }
         
 //        updateNowPlayingInfo()
