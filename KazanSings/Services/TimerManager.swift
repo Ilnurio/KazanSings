@@ -14,6 +14,16 @@ final class TimerManager: ObservableObject {
     
     @Published var timer: Timer?
     @Published var timeString = ""
+    @Published var remainingTime: TimeInterval = 0 {
+        didSet {
+            let formatter = DateComponentsFormatter()
+            formatter.allowedUnits = [.hour, .minute, .second]
+//            formatter.zeroFormattingBehavior = .pad
+            if let formattedTime = formatter.string(from: remainingTime) {
+                timeString = formattedTime
+            }
+        }
+    }
     
     // MARK: - Private Properties
 //    private var remainingTime: TimeInterval = 0 {
@@ -50,16 +60,7 @@ final class TimerManager: ObservableObject {
 //        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
 //    }
     
-    private var remainingTime: TimeInterval = 0 {
-        didSet {
-            let formatter = DateComponentsFormatter()
-            formatter.allowedUnits = [.hour, .minute, .second]
-//            formatter.zeroFormattingBehavior = .pad
-            if let formattedTime = formatter.string(from: remainingTime) {
-                timeString = formattedTime
-            }
-        }
-    }
+   
 
 
     
@@ -90,5 +91,6 @@ final class TimerManager: ObservableObject {
         } else {
             stop()
         }
+        print(remainingTime)
     }
 }
