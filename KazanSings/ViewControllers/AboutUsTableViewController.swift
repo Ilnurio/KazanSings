@@ -36,18 +36,17 @@ final class AboutUsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let imageName = aboutUs[indexPath.section].imageName[indexPath.row]
+        let nameSurName = aboutUs[indexPath.section].nameSurName[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        let aboutUs = aboutUs[indexPath.row]
         
-        content.text = aboutUs.nameSurName
-//      content.secondaryText = aboutUs.statusInTeam
+        content.text = nameSurName
         content.textProperties.color = .white
         content.textProperties.font = .boldSystemFont(ofSize: 17)
-//        content.secondaryTextProperties.color = .white
-//        content.secondaryTextProperties.font = .systemFont(ofSize: 15)
         
-        content.image = UIImage(named: aboutUs.imageName)
+        content.image = UIImage(named: imageName)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         content.imageProperties.tintColor = .white
         
