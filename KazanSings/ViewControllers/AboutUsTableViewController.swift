@@ -36,6 +36,7 @@ final class AboutUsTableViewController: UITableViewController {
         content.image = UIImage(named: aboutUs.imageName)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         content.imageProperties.tintColor = .white
+        cell.selectionStyle = .none
         cell.separatorInset.left = view.frame.width
         
         cell.contentConfiguration = content
@@ -43,13 +44,7 @@ final class AboutUsTableViewController: UITableViewController {
         return cell
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showAboutFounder", sender: nil)
     }
-    */
 }
