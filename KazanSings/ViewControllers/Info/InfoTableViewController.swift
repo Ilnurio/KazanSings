@@ -48,7 +48,7 @@ final class InfoTableViewController: UITableViewController {
         content.imageProperties.tintColor = .white
         
         switch indexPath.section {
-        case 0...infoList.count - 2: 
+        case 0...infoList.count - 2:
             let selectedView = UIView()
             selectedView.backgroundColor = UIColor(named: "CellColor")
             cell.selectedBackgroundView = selectedView
@@ -90,9 +90,6 @@ final class InfoTableViewController: UITableViewController {
         switch indexPath.section {
         case 0 where indexPath.row != 1:
             guard let url = URL(string: link) else { return }
-            //            UIApplication.shared.open(url)
-            
-            
             showOkAlert(title: title, message: link) { _ in
                 UIApplication.shared.open(url)
             }
