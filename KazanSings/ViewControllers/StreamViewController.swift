@@ -84,6 +84,8 @@ final class StreamViewController: UIViewController {
         // Добавляем обработчик для команды паузы
         commandCenter.pauseCommand.addTarget { [weak self] _ in
             self?.player.pause()
+            self?.timerManager.stop()
+            self?.timerButton.isEnabled = false
             self?.playButton.setImage(UIImage(named: "playbutton"), for: .normal)
             return .success
         }
@@ -101,10 +103,6 @@ final class StreamViewController: UIViewController {
             MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPMediaItemPropertyArtwork] = artwork
         }
     
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        print("I disappear")
     }
     
     private func pausePlayer() {
