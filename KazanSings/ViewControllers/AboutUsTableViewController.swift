@@ -13,12 +13,26 @@ final class AboutUsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 100
+        tableView.rowHeight = 60
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         aboutUs.count
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor(named: "MainColor")
+        
+        let label = UILabel()
+        label.textColor = .opaqueSeparator
+        label.text = aboutUs[section].statusInTeam
+        label.frame = CGRect(x: 15, y: 3, width: tableView.bounds.size.width - 30, height: 20)
+        
+        headerView.addSubview(label)
+        
+        return headerView
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -26,16 +40,12 @@ final class AboutUsTableViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         let aboutUs = aboutUs[indexPath.row]
         
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.white
-        cell.selectedBackgroundView = backgroundView
-        
         content.text = aboutUs.nameSurName
-        content.secondaryText = aboutUs.statusInTeam
+//      content.secondaryText = aboutUs.statusInTeam
         content.textProperties.color = .white
         content.textProperties.font = .boldSystemFont(ofSize: 17)
-        content.secondaryTextProperties.color = .white
-        content.secondaryTextProperties.font = .systemFont(ofSize: 15)
+//        content.secondaryTextProperties.color = .white
+//        content.secondaryTextProperties.font = .systemFont(ofSize: 15)
         
         content.image = UIImage(named: aboutUs.imageName)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2

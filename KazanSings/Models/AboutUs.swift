@@ -12,8 +12,8 @@ enum LinkName {
 }
 
 struct AboutUs {
-    let imageName: String
-    let nameSurName: String
+    let imageName: [String]
+    let nameSurName: [String]
     let statusInTeam: String
     let link: [LinkName: String]
     
