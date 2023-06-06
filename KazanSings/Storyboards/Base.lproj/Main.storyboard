@@ -267,33 +267,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="MainColor"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="personCell" textLabel="Ymn-kk-Pxb" detailTextLabel="xmp-A2-EKa" imageView="t9u-nM-05m" rowHeight="126" style="IBUITableViewCellStyleSubtitle" id="edC-XZ-MCn">
-                                <rect key="frame" x="0.0" y="50" width="430" height="126"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="personCell" textLabel="Ymn-kk-Pxb" detailTextLabel="xmp-A2-EKa" imageView="t9u-nM-05m" rowHeight="130" style="IBUITableViewCellStyleSubtitle" id="edC-XZ-MCn">
+                                <rect key="frame" x="0.0" y="50" width="430" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="edC-XZ-MCn" id="u39-En-gzt">
-                                    <rect key="frame" x="0.0" y="0.0" width="430" height="126"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="NameSurName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ymn-kk-Pxb">
-                                            <rect key="frame" x="167.66666666666666" y="47" width="85" height="14.333333333333334"/>
+                                            <rect key="frame" x="171.66666666666666" y="49" width="85" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="teamlead" id="t9u-nM-05m">
-                                            <rect key="frame" x="20" y="0.0" width="132.66666666666666" height="126"/>
+                                            <rect key="frame" x="20" y="0.0" width="136.66666666666666" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xmp-A2-EKa">
-                                            <rect key="frame" x="167.66666666666666" y="63.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                            <rect key="frame" x="171.66666666666666" y="65.333333333333329" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" name="MainColor"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="MainColor"/>
                             </tableViewCell>
@@ -310,7 +313,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVh-QH-LWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3204" y="-363"/>
+            <point key="canvasLocation" x="3203.7209302325582" y="-363.09012875536484"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XK4-7l-6lM">

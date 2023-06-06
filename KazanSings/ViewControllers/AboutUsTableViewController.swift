@@ -26,6 +26,10 @@ final class AboutUsTableViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         let aboutUs = aboutUs[indexPath.row]
         
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.white
+        cell.selectedBackgroundView = backgroundView
+        
         content.text = aboutUs.nameSurName
         content.secondaryText = aboutUs.statusInTeam
         content.textProperties.color = .white
@@ -36,8 +40,6 @@ final class AboutUsTableViewController: UITableViewController {
         content.image = UIImage(named: aboutUs.imageName)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         content.imageProperties.tintColor = .white
-        cell.selectionStyle = .none
-        cell.separatorInset.left = view.frame.width
         
         cell.contentConfiguration = content
         
