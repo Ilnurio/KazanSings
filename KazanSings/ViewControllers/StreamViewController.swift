@@ -19,11 +19,14 @@ final class StreamViewController: UIViewController {
     
     private let timerManager = TimerManager.shared
     private var cancelables: Set<AnyCancellable> = []
+    private var remainingTime: TimeInterval = 0
     
     private var timer: Timer? {
         didSet {
-            if timer == nil {
+            if timer == nil && remainingTime == 0 {
                 pausePlayer()
+                timerButton.tintColor = .white
+            } else if timer == nil {
                 timerButton.tintColor = .white
             } else {
                 timerButton.tintColor = .yellow
@@ -149,6 +152,12 @@ extension StreamViewController {
         timerManager.$timer
             .sink { [weak self] timer in
                 self?.timer = timer
+            }
+            .store(in: &cancelables)
+        
+        timerManager.$remainingTime
+            .sink { [weak self] time in
+                self?.remainingTime = time
             }
             .store(in: &cancelables)
     }
