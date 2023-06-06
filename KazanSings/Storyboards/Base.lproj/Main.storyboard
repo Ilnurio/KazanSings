@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="weF-Ic-053">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="weF-Ic-053">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -106,20 +106,20 @@
             <objects>
                 <viewController id="H8T-Bj-wF1" customClass="TimerViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rfg-7f-u0P">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b22-ID-vDP">
-                                <rect key="frame" x="20" y="206.66666666666663" width="390" height="232"/>
+                                <rect key="frame" x="20" y="193.33333333333331" width="390" height="217.33333333333331"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:34:58" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="PuC-Yi-aSf">
-                                <rect key="frame" x="80" y="302.33333333333331" width="270" height="41"/>
+                                <rect key="frame" x="80" y="281.66666666666669" width="270" height="41"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4O7-BZ-ekp">
-                                <rect key="frame" x="20" y="676" width="390" height="123.33333333333337"/>
+                                <rect key="frame" x="20" y="628.66666666666663" width="390" height="123.33333333333337"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBN-Pa-fcf">
                                         <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="123.33333333333333"/>
@@ -152,10 +152,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSQ-Ie-FeP">
-                                <rect key="frame" x="30" y="40" width="370" height="56"/>
+                                <rect key="frame" x="30" y="99" width="370" height="52.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таймер отключения радио" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7e7-8l-enz">
-                                        <rect key="frame" x="25" y="5" width="320" height="46"/>
+                                        <rect key="frame" x="25" y="5" width="320" height="42.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -175,7 +175,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R3-qt-Zzu">
-                                <rect key="frame" x="20" y="598.66666666666663" width="390" height="1"/>
+                                <rect key="frame" x="20" y="560.33333333333337" width="390" height="1"/>
                                 <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="hyP-mI-43l"/>
@@ -268,13 +268,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="MainColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" rowHeight="126" id="edC-XZ-MCn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" textLabel="Ymn-kk-Pxb" detailTextLabel="Lf3-D9-76d" imageView="t9u-nM-05m" rowHeight="126" style="IBUITableViewCellStyleSubtitle" id="edC-XZ-MCn">
                                 <rect key="frame" x="0.0" y="50" width="430" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="edC-XZ-MCn" id="u39-En-gzt">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="126"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="NameSurName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ymn-kk-Pxb">
+                                            <rect key="frame" x="167.66666666666666" y="41" width="123" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lf3-D9-76d">
+                                            <rect key="frame" x="167.66666666666666" y="64.333333333333329" width="51.333333333333336" height="17.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="teamlead" id="t9u-nM-05m">
+                                            <rect key="frame" x="20" y="0.0" width="132.66666666666666" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="MainColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -379,6 +400,7 @@
         <image name="logosheet" width="512" height="512"/>
         <image name="playbutton" width="100" height="100"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="teamlead" width="640" height="609"/>
         <image name="timer" catalog="system" width="128" height="123"/>
         <image name="waveform.path" catalog="system" width="128" height="113"/>
         <namedColor name="MainColor">
