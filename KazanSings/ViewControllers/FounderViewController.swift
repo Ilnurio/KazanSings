@@ -17,13 +17,17 @@ class FounderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        introductionLabel.text = aboutUs.first?.introduction
+        descriptionLabel.text = aboutUs.first?.description
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.imageLabel.round(
             cornerRadius: self.imageLabel.frame.size.width / 2,
             borderWidth: 3.0,
             borderColor: .white
         )
-        
-        introductionLabel.text = aboutUs.first?.introduction
     }
 }
 
