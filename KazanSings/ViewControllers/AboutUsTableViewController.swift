@@ -73,6 +73,13 @@ final class AboutUsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showAboutFounder", sender: nil)
+        
+        switch indexPath.section {
+        case 0:
+            performSegue(withIdentifier: "showAboutFounder", sender: nil)
+        default:
+            break
+        }
+        
     }
 }
