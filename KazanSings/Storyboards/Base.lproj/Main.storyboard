@@ -429,7 +429,7 @@
                                 <rect key="frame" x="0.0" y="103" width="430" height="829"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3h-dQ-ooN" userLabel="FounderView">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="1200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kj1-ld-yy8">
                                                 <rect key="frame" x="16" y="118" width="398" height="14.333333333333343"/>
@@ -450,18 +450,36 @@
                                                     <constraint firstAttribute="height" constant="100" id="sJC-XM-t5f"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUn-wm-YHb">
+                                                <rect key="frame" x="180" y="180.33333333333331" width="70" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="tg link">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeM-oa-Mcb">
+                                                <rect key="frame" x="176.66666666666666" y="225.33333333333331" width="77" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="VK link">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" name="MainColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1000" id="88M-Do-EMj"/>
+                                            <constraint firstItem="VUn-wm-YHb" firstAttribute="centerX" secondItem="p3h-dQ-ooN" secondAttribute="centerX" id="4XX-bJ-G8N"/>
+                                            <constraint firstAttribute="height" constant="1200" id="88M-Do-EMj"/>
+                                            <constraint firstItem="YeM-oa-Mcb" firstAttribute="centerX" secondItem="p3h-dQ-ooN" secondAttribute="centerX" id="8os-Tr-5tO"/>
                                             <constraint firstItem="kj1-ld-yy8" firstAttribute="top" secondItem="600-Ox-F73" secondAttribute="bottom" constant="10" id="D3g-oO-era"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Qe-ZM-wXV" secondAttribute="trailing" id="Htl-7Q-9KP"/>
                                             <constraint firstItem="kj1-ld-yy8" firstAttribute="leading" secondItem="p3h-dQ-ooN" secondAttribute="leading" constant="16" id="Ilj-1N-3Az"/>
                                             <constraint firstItem="5Qe-ZM-wXV" firstAttribute="top" secondItem="kj1-ld-yy8" secondAttribute="bottom" constant="20" id="KSU-hA-OkZ"/>
                                             <constraint firstItem="600-Ox-F73" firstAttribute="top" secondItem="p3h-dQ-ooN" secondAttribute="top" constant="8" id="Wjo-JY-fyr"/>
+                                            <constraint firstItem="YeM-oa-Mcb" firstAttribute="top" secondItem="VUn-wm-YHb" secondAttribute="bottom" constant="10" id="XwO-aD-1cE"/>
                                             <constraint firstItem="5Qe-ZM-wXV" firstAttribute="leading" secondItem="p3h-dQ-ooN" secondAttribute="leading" constant="16" id="Yf4-gn-hxp"/>
                                             <constraint firstItem="5Qe-ZM-wXV" firstAttribute="centerX" secondItem="p3h-dQ-ooN" secondAttribute="centerX" id="eC1-01-EZW"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kj1-ld-yy8" secondAttribute="trailing" id="jWj-uf-0g1"/>
+                                            <constraint firstItem="VUn-wm-YHb" firstAttribute="top" secondItem="5Qe-ZM-wXV" secondAttribute="bottom" constant="10" id="meV-AG-BRh"/>
                                             <constraint firstItem="kj1-ld-yy8" firstAttribute="centerX" secondItem="p3h-dQ-ooN" secondAttribute="centerX" id="pVH-rk-tud"/>
                                             <constraint firstItem="600-Ox-F73" firstAttribute="centerX" secondItem="p3h-dQ-ooN" secondAttribute="centerX" id="yym-RV-aFv"/>
                                         </constraints>
@@ -491,6 +509,8 @@
                         <outlet property="descriptionLabel" destination="5Qe-ZM-wXV" id="s84-Kz-hUC"/>
                         <outlet property="imageLabel" destination="600-Ox-F73" id="RBj-Tb-RTv"/>
                         <outlet property="introductionLabel" destination="kj1-ld-yy8" id="YSO-QB-ljS"/>
+                        <outlet property="tgButton" destination="VUn-wm-YHb" id="QLa-3S-5oJ"/>
+                        <outlet property="vkButton" destination="YeM-oa-Mcb" id="yxs-Ku-oQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCk-qM-Vxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

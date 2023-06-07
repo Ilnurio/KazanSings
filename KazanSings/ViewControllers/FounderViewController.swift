@@ -12,6 +12,8 @@ class FounderViewController: UIViewController {
     @IBOutlet var imageLabel: UIImageView!
     @IBOutlet var introductionLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var vkButton: UIButton!
+    @IBOutlet var tgButton: UIButton!
     
     private let aboutUs = AboutUs.getAboutUs()
     
@@ -28,6 +30,11 @@ class FounderViewController: UIViewController {
             borderWidth: 3.0,
             borderColor: .white
         )
+        
+        tgButton.setImage(UIImage(named: "telegram"), for: .normal)
+        tgButton.setTitle("Написать в Telegram", for: .normal)
+        vkButton.setImage(UIImage(named: "vk"), for: .normal)
+        vkButton.setTitle("Написать в VK", for: .normal)
     }
 }
 
