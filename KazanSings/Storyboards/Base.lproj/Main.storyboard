@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="weF-Ic-053">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="weF-Ic-053">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
         <!--Казань Поёт-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StreamViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StreamViewController" customModule="Казань_Поёт" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,16 +109,16 @@
         <!--Bit Rate View Controller-->
         <scene sceneID="VX9-w3-LAI">
             <objects>
-                <viewController id="gjQ-Cg-EDf" customClass="BitRateViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gjQ-Cg-EDf" customClass="BitRateViewController" customModule="Казань_Поёт" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EC9-Ps-BPL">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfK-d9-sYY">
-                                <rect key="frame" x="30" y="40" width="370" height="56"/>
+                                <rect key="frame" x="30" y="99" width="370" height="52.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки стрима" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lFM-0Q-tk3">
-                                        <rect key="frame" x="25" y="5" width="320" height="46"/>
+                                        <rect key="frame" x="25" y="5" width="320" height="42.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qRC-WH-Dqf">
-                                <rect key="frame" x="0.0" y="126" width="430" height="545"/>
+                                <rect key="frame" x="0.0" y="181.33333333333334" width="430" height="445.33333333333326"/>
                                 <color key="backgroundColor" name="PopOverColor"/>
                                 <color key="separatorColor" systemColor="labelColor"/>
                                 <prototypes>
@@ -160,14 +160,14 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPL-g1-gYE">
-                                <rect key="frame" x="20" y="691" width="390" height="1"/>
+                                <rect key="frame" x="20" y="646.66666666666663" width="390" height="1"/>
                                 <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="U6a-Nb-S4o"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbA-SG-wGT">
-                                <rect key="frame" x="153.33333333333334" y="736" width="123.33333333333334" height="123.33333333333337"/>
+                                <rect key="frame" x="157.33333333333334" y="688.66666666666663" width="115.33333333333334" height="115.66666666666663"/>
                                 <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SbA-SG-wGT" secondAttribute="height" multiplier="1:1" id="tFM-bL-vLW"/>
@@ -213,22 +213,22 @@
         <!--Timer View Controller-->
         <scene sceneID="iol-RN-mvV">
             <objects>
-                <viewController id="H8T-Bj-wF1" customClass="TimerViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="H8T-Bj-wF1" customClass="TimerViewController" customModule="Казань_Поёт" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rfg-7f-u0P">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b22-ID-vDP">
-                                <rect key="frame" x="20" y="206.66666666666663" width="390" height="232"/>
+                                <rect key="frame" x="20" y="193.33333333333331" width="390" height="217.33333333333331"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:34:58" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="PuC-Yi-aSf">
-                                <rect key="frame" x="80" y="302.33333333333331" width="270" height="41"/>
+                                <rect key="frame" x="80" y="281.66666666666669" width="270" height="41"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4O7-BZ-ekp">
-                                <rect key="frame" x="20" y="736" width="390" height="123.33333333333337"/>
+                                <rect key="frame" x="20" y="684.66666666666663" width="390" height="123.33333333333337"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBN-Pa-fcf">
                                         <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="123.33333333333333"/>
@@ -261,10 +261,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSQ-Ie-FeP">
-                                <rect key="frame" x="30" y="40" width="370" height="56"/>
+                                <rect key="frame" x="30" y="99" width="370" height="52.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таймер отключения радио" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7e7-8l-enz">
-                                        <rect key="frame" x="25" y="5" width="320" height="46"/>
+                                        <rect key="frame" x="25" y="5" width="320" height="42.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -284,7 +284,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R3-qt-Zzu">
-                                <rect key="frame" x="20" y="691" width="390" height="1"/>
+                                <rect key="frame" x="20" y="646.66666666666663" width="390" height="1"/>
                                 <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="hyP-mI-43l"/>
@@ -327,7 +327,7 @@
         <!--Инфо-->
         <scene sceneID="A3v-KC-dlt">
             <objects>
-                <tableViewController id="88Q-Y0-Su5" customClass="InfoTableViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="88Q-Y0-Su5" customClass="InfoTableViewController" customModule="Казань_Поёт" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="gIs-jP-USJ">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -371,7 +371,7 @@
         <!--Команда-->
         <scene sceneID="kzg-hC-WZl">
             <objects>
-                <tableViewController id="ktp-VU-81b" customClass="AboutUsTableViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ktp-VU-81b" customClass="AboutUsTableViewController" customModule="Казань_Поёт" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="f2L-PS-2g4">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,19 +424,67 @@
                     <view key="view" contentMode="scaleToFill" id="iTv-8i-mYn">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnl-uw-VCk">
+                                <rect key="frame" x="0.0" y="103" width="430" height="829"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3h-dQ-ooN" userLabel="FounderView">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="829"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="teamlead" translatesAutoresizingMaskIntoConstraints="NO" id="bY6-Zh-heB">
+                                                <rect key="frame" x="16" y="0.0" width="398" height="609"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kj1-ld-yy8">
+                                                <rect key="frame" x="173.33333333333334" y="657" width="83.333333333333343" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qe-ZM-wXV">
+                                                <rect key="frame" x="193" y="723" width="44.333333333333343" height="20.333333333333371"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="MainColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="829" id="88M-Do-EMj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="p3h-dQ-ooN" secondAttribute="bottom" id="2Is-Hc-gWi"/>
+                                    <constraint firstAttribute="trailing" secondItem="p3h-dQ-ooN" secondAttribute="trailing" id="NXU-b2-KJY"/>
+                                    <constraint firstItem="p3h-dQ-ooN" firstAttribute="top" secondItem="lnl-uw-VCk" secondAttribute="top" id="bXP-ET-jWA"/>
+                                    <constraint firstItem="p3h-dQ-ooN" firstAttribute="leading" secondItem="lnl-uw-VCk" secondAttribute="leading" id="huy-mq-l0Y"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qPX-KY-pbs"/>
                         <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstItem="lnl-uw-VCk" firstAttribute="leading" secondItem="qPX-KY-pbs" secondAttribute="leading" id="1g9-UP-UWX"/>
+                            <constraint firstItem="lnl-uw-VCk" firstAttribute="top" secondItem="qPX-KY-pbs" secondAttribute="top" id="dX5-WK-YYy"/>
+                            <constraint firstAttribute="bottom" secondItem="lnl-uw-VCk" secondAttribute="bottom" id="dzE-Ti-6Bg"/>
+                            <constraint firstItem="lnl-uw-VCk" firstAttribute="trailing" secondItem="qPX-KY-pbs" secondAttribute="trailing" id="l57-uW-uPJ"/>
+                            <constraint firstItem="p3h-dQ-ooN" firstAttribute="width" secondItem="iTv-8i-mYn" secondAttribute="width" id="mNj-mC-S8L"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lQI-jI-HuH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCk-qM-Vxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4254" y="-562"/>
+            <point key="canvasLocation" x="4253.0232558139533" y="-562.01716738197433"/>
         </scene>
         <!--О нас-->
         <scene sceneID="JIq-36-wl0">
             <objects>
-                <viewController id="QAI-9O-8tt" customClass="AboutAppViewController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QAI-9O-8tt" customClass="AboutAppViewController" customModule="Казань_Поёт" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="26B-4O-iwj">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -500,7 +548,7 @@
         <!--Base Navigation Controller-->
         <scene sceneID="uiE-55-IEs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="weF-Ic-053" customClass="BaseNavigationController" customModule="KazanSings" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="weF-Ic-053" customClass="BaseNavigationController" customModule="Казань_Поёт" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G9s-3T-Pcg">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
