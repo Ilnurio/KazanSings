@@ -10,7 +10,7 @@ import UIKit
 class FounderViewController: UIViewController {
     
     @IBOutlet var imageLabel: UIImageView!
-    @IBOutlet var introducationLabel: UILabel!
+    @IBOutlet var introductionLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
     private let aboutUs = AboutUs.getAboutUs()
@@ -23,7 +23,7 @@ class FounderViewController: UIViewController {
             borderColor: .white
         )
         
-        introducationLabel.text = aboutUs
+        introductionLabel.text = aboutUs.first?.introduction
     }
 }
 
