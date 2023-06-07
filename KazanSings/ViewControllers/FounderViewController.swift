@@ -23,7 +23,7 @@ class FounderViewController: UIViewController {
             borderColor: .white
         )
         
-        introducationLabel.text = aboutUs
+       // introducationLabel.text = aboutUs
     }
 }
 
