@@ -54,6 +54,19 @@ final class AboutUsTableViewController: UITableViewController {
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         content.imageProperties.tintColor = .white
         
+        if aboutUs[indexPath.section].statusInTeam == "Основатель" {
+            let image = UIImage(systemName: "chevron.right") ?? UIImage()
+            let accessory = UIImageView(frame: CGRect(
+                x: 0,
+                y: 0,
+                width: image.size.width,
+                height: image.size.height
+            ))
+            accessory.image = image
+            accessory.tintColor = UIColor.opaqueSeparator
+            cell.accessoryView = accessory
+        }
+        
         cell.contentConfiguration = content
         
         return cell
