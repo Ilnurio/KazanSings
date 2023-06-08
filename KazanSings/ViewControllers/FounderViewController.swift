@@ -39,6 +39,15 @@ class FounderViewController: UIViewController {
         vkButton.setTitle("Написать в VK", for: .normal)
         vkButton.backgroundColor = UIColor(named: "PopOverColor")
     }
+    
+    @IBAction func tgButtonTapped() {
+        
+    }
+    
+    @IBAction func vkButtonTapped() {
+        
+    }
+    
 }
 
 extension UIView {

@@ -461,6 +461,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tgButtonTapped" destination="t3D-IN-z44" eventType="touchUpInside" id="Urp-hz-k1A"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeM-oa-Mcb">
                                                 <rect key="frame" x="176.66666666666666" y="225.33333333333331" width="77" height="35"/>
@@ -473,6 +476,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="vkButtonTapped" destination="t3D-IN-z44" eventType="touchUpInside" id="BkC-x8-QQv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="MainColor"/>
