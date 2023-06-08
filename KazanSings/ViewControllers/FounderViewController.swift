@@ -31,10 +31,13 @@ class FounderViewController: UIViewController {
             borderColor: .white
         )
         
-        tgButton.setImage(UIImage(named: "telegram"), for: .normal)
-        tgButton.setTitle("Написать в Telegram", for: .normal)
-        vkButton.setImage(UIImage(named: "vk"), for: .normal)
+        tgButton.setImage(UIImage(named: "telegramshare"), for: .normal)
+        tgButton.setTitle("Написать в TG", for: .normal)
+        tgButton.backgroundColor = UIColor(named: "PopOverColor")
+        
+        vkButton.setImage(UIImage(named: "vkshare"), for: .normal)
         vkButton.setTitle("Написать в VK", for: .normal)
+        vkButton.backgroundColor = UIColor(named: "PopOverColor")
     }
 }
 
