@@ -10,12 +10,12 @@ import UIKit
 final class AboutUsTableViewController: UITableViewController {
     
     private let aboutUs = AboutUs.getAboutUs()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 60
     }
-
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         aboutUs.count
@@ -38,7 +38,7 @@ final class AboutUsTableViewController: UITableViewController {
         
         return headerView
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let imageName = aboutUs[indexPath.section].imageName[indexPath.row]
         let nameSurName = aboutUs[indexPath.section].nameSurName[indexPath.row]
@@ -71,15 +71,22 @@ final class AboutUsTableViewController: UITableViewController {
         
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.section {
         case 0:
             performSegue(withIdentifier: "showAboutFounder", sender: nil)
+        case 1 where indexPath.row == 0:
+            guard let url = URL(string: aboutUs.last?.link.first ?? "") else { return }
+            showOkAlert(title: title ?? "", message: aboutUs.last?.title.last ?? "") { _ in
+                UIApplication.shared.open(url)
+            }
         default:
-            break
+            guard let url = URL(string: aboutUs.last?.link.last ?? "") else { return }
+            showOkAlert(title: title ?? "", message: aboutUs.last?.title.last ?? "") { _ in
+                UIApplication.shared.open(url)
+            }
         }
-        
     }
 }

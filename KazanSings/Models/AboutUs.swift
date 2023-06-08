@@ -5,18 +5,12 @@
 //  Created by Ilnur on 05.06.2023.
 //
 
-enum LinkName {
-    case vk
-    case telegram
-    case githubOne
-    case githubTwo
-}
-
 struct AboutUs {
     let statusInTeam: String
     let imageName: [String]
     let nameSurName: [String]
-    let link: [LinkName: String]
+    let link: [String]
+    let title: [String]
     
     var introduction: String?
     var description: String?
@@ -29,7 +23,8 @@ extension AboutUs {
                 statusInTeam: "Основатель",
                 imageName: ["teamlead"],
                 nameSurName: ["Андрей Лысяков"],
-                link: [.vk: "https://vk.com/id96111646", .telegram: "@Andy_Bald"],
+                link: ["https://vk.com/id96111646", "@Andy_Bald"],
+                title: ["Перейти в TG?", "Перейти в VK"],
                 introduction: """
                 Режиссер, драматург, автор песен и мюзиклов, генеральный продюсер онлайн-радио «Казань поёт»
                 """,
@@ -41,10 +36,9 @@ extension AboutUs {
                 statusInTeam: "IOS Разработчик",
                 imageName: ["programmerone", "programmertwo"],
                 nameSurName: ["Михаил Бухрашвили", "Ильнур Фаттахов"],
-                link: [
-                    .githubOne: "https://github.com/GE-Developer",
-                    .githubTwo: "https://github.com/Ilnurio"
-                ])
+                link: ["https://github.com/GE-Developer", "https://github.com/Ilnurio"],
+                title: ["Перейти на GitHub?"]
+            )
         ]
     }
 }
