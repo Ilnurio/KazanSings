@@ -23,7 +23,7 @@ extension AboutUs {
                 statusInTeam: "Основатель",
                 imageName: ["teamlead"],
                 nameSurName: ["Андрей Лысяков"],
-                link: ["https://vk.com/id96111646", "@Andy_Bald"],
+                link: ["https://t.me/Andy_Bald", "https://vk.com/id96111646"],
                 title: ["Перейти в TG?", "Перейти в VK?"],
                 introduction: """
                 Режиссер, драматург, автор песен и мюзиклов, генеральный продюсер онлайн-радио «Казань поёт»

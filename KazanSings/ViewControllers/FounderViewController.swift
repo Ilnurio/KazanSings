@@ -41,11 +41,17 @@ class FounderViewController: UIViewController {
     }
     
     @IBAction func tgButtonTapped() {
-        
+        guard let url = URL(string: aboutUs.first?.link.first ?? "") else { return }
+        showOkAlert(title: title ?? "", message: aboutUs.first?.title.first ?? "") { _ in
+            UIApplication.shared.open(url)
+        }
     }
     
     @IBAction func vkButtonTapped() {
-        
+        guard let url = URL(string: aboutUs.first?.link.last ?? "") else { return }
+        showOkAlert(title: title ?? "", message: aboutUs.first?.title.last ?? "") { _ in
+            UIApplication.shared.open(url)
+        }
     }
     
 }
