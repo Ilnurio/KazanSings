@@ -73,20 +73,43 @@ final class AboutUsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let link = aboutUs[indexPath.section].link[indexPath.row]
+        let title = aboutUs[indexPath.section].title[indexPath.row]
         
         switch indexPath.section {
         case 0:
             performSegue(withIdentifier: "showAboutFounder", sender: nil)
-        case 1 where indexPath.row == 0:
-            guard let url = URL(string: aboutUs.last?.link.first ?? "") else { return }
-            showOkAlert(title: title ?? "", message: aboutUs.last?.title.last ?? "") { _ in
+        case 1:
+            guard let url = URL(string: link) else { return }
+            showOkAlert(title: link , message: title) { _ in
+                UIApplication.shared.open(url)
+            }
+        case 2 where indexPath.row == 0:
+            guard let url = URL(string: link) else { return }
+            showOkAlert(title: link , message: title) { _ in
                 UIApplication.shared.open(url)
             }
         default:
-            guard let url = URL(string: aboutUs.last?.link.last ?? "") else { return }
-            showOkAlert(title: title ?? "", message: aboutUs.last?.title.last ?? "") { _ in
-                UIApplication.shared.open(url)
-            }
+            break
         }
     }
 }
+
+//switch indexPath.section {
+//case 0 where indexPath.row != 1:
+//    guard let url = URL(string: link) else { return }
+//    showOkAlert(title: title, message: link) { _ in
+//        UIApplication.shared.open(url)
+//    }
+//case 0 where indexPath.row == 1:
+//    sendMail(mail: [link], subject: "Пользователь «Казань Поёт»")
+//case 1:
+//    performSegue(
+//        withIdentifier: infoList[indexPath.section].segueIDs?[indexPath.row] ?? "",
+//        sender: nil
+//    )
+//default:
+//    break
+//}
