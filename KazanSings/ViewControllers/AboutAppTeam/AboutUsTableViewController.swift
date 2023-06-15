@@ -91,7 +91,7 @@ final class AboutUsTableViewController: UITableViewController {
             showOkAlert(title: title , message: link) { _ in
                 UIApplication.shared.open(url)
             }
-            }
         }
     }
+}
 
