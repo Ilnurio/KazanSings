@@ -33,6 +33,13 @@ extension AboutUs {
                 """
             ),
             AboutUs(
+                statusInTeam: "Технический директор",
+                imageName: ["director"],
+                nameSurName: ["Котенков Артем"],
+                link: ["kotenkoff@gmail.com"],
+                title: ["Написать на почту?"]
+            ),
+            AboutUs(
                 statusInTeam: "IOS Разработчик",
                 imageName: ["programmerone", "programmertwo"],
                 nameSurName: ["Михаил Бухрашвили", "Ильнур Фаттахов"],
