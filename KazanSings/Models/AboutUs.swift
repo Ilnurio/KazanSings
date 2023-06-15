@@ -35,7 +35,7 @@ extension AboutUs {
             AboutUs(
                 statusInTeam: "Технический директор",
                 imageName: ["director"],
-                nameSurName: ["Котенков Артем"],
+                nameSurName: ["Артем Котенков"],
                 link: ["https://vk.com/a.kotenkov"],
                 title: ["Написать в ВК?"]
             ),
