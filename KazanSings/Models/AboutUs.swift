@@ -36,15 +36,15 @@ extension AboutUs {
                 statusInTeam: "Технический директор",
                 imageName: ["director"],
                 nameSurName: ["Котенков Артем"],
-                link: ["kotenkoff@gmail.com"],
-                title: ["Написать на почту?"]
+                link: ["https://vk.com/a.kotenkov"],
+                title: ["Написать в ВК?"]
             ),
             AboutUs(
                 statusInTeam: "IOS Разработчик",
                 imageName: ["programmerone", "programmertwo"],
                 nameSurName: ["Михаил Бухрашвили", "Ильнур Фаттахов"],
                 link: ["https://github.com/GE-Developer", "https://github.com/Ilnurio"],
-                title: ["Перейти на GitHub?"]
+                title: ["Перейти на GitHub?", "Перейти на GitHub?"]
             )
         ]
     }

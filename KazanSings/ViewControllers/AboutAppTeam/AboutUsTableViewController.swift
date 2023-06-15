@@ -83,33 +83,15 @@ final class AboutUsTableViewController: UITableViewController {
             performSegue(withIdentifier: "showAboutFounder", sender: nil)
         case 1:
             guard let url = URL(string: link) else { return }
-            showOkAlert(title: link , message: title) { _ in
-                UIApplication.shared.open(url)
-            }
-        case 2 where indexPath.row == 0:
-            guard let url = URL(string: link) else { return }
-            showOkAlert(title: link , message: title) { _ in
+            showOkAlert(title: title , message: link) { _ in
                 UIApplication.shared.open(url)
             }
         default:
-            break
+            guard let url = URL(string: link) else { return }
+            showOkAlert(title: title , message: link) { _ in
+                UIApplication.shared.open(url)
+            }
+            }
         }
     }
-}
 
-//switch indexPath.section {
-//case 0 where indexPath.row != 1:
-//    guard let url = URL(string: link) else { return }
-//    showOkAlert(title: title, message: link) { _ in
-//        UIApplication.shared.open(url)
-//    }
-//case 0 where indexPath.row == 1:
-//    sendMail(mail: [link], subject: "Пользователь «Казань Поёт»")
-//case 1:
-//    performSegue(
-//        withIdentifier: infoList[indexPath.section].segueIDs?[indexPath.row] ?? "",
-//        sender: nil
-//    )
-//default:
-//    break
-//}
