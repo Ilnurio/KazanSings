@@ -133,8 +133,6 @@ final class StreamViewController: UIViewController {
     @IBAction func shareSheetTapped(_ sender: UIBarButtonItem) {
         presentShareSheet()
     }
-    
-
 }
 
  // MARK: - ShareSheet
