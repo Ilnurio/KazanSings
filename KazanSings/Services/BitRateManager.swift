@@ -82,10 +82,10 @@ final class BitRateManager: ObservableObject {
         let url_128 = string(forKey: BitRateURL.url_128)
         let url_192 = string(forKey: BitRateURL.url_192)
         let url_320 = string(forKey: BitRateURL.url_320)
-        currentLink = BitRateURL(rawValue: url_64)!
+        // дальше данные никуда не идут
     }
     
     func string(forKey key: BitRateURL) -> String {
-        RemoteConfig.remoteConfig()[key.rawValue].stringValue ?? ""
+        RemoteConfig.remoteConfig()[key.rawValue].stringValue ?? "https://stream01.hitv.ru:8443/kazansings-64kb"
     }
 }

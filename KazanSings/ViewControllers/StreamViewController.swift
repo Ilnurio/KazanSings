@@ -63,7 +63,7 @@ final class StreamViewController: UIViewController {
         bitRateManager.updateBitRatesWithRC()
         bitRateManager.fetchRemoteConfig()
         
-        player = AVPlayer(url: URL(string: bitRateManager.currentLink.rawValue)!)
+        player = AVPlayer(url: URL(string: bitRateManager.currentLink)!)
 //        player.currentItem?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
         bindTimer()
         
@@ -117,7 +117,7 @@ final class StreamViewController: UIViewController {
             timerButton.isEnabled = false
             timerManager.stop()
         } else {
-            player = AVPlayer(url: URL(string:bitRateManager.currentLink.rawValue)!)
+            player = AVPlayer(url: URL(string:bitRateManager.currentLink)!)
             try! AVAudioSession.sharedInstance().setActive(true)
             player.play()
             playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
