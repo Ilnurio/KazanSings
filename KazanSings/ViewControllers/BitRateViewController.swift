@@ -16,7 +16,6 @@ final class BitRateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        bitRateTableView.isScrollEnabled = false
         bitRateTableView.rowHeight = view.frame.height / 15
         bitRateTableView.sectionHeaderHeight = view.frame.height / 18
     }
@@ -76,8 +75,6 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
         cell.contentConfiguration = content
         return cell
     }
-    
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.visibleCells.forEach { cell in

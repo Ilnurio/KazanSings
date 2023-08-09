@@ -56,12 +56,14 @@ final class StreamViewController: UIViewController {
 //        }
 //    }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+ // добавляем начальные значение битрейтов
+        bitRateManager.setupRemoteConfigDefaults()
+        bitRateManager.updateBitRatesWithRC()
+        bitRateManager.fetchRemoteConfig()
         
-        player = AVPlayer(url: bitRateManager.currentLink.url)
+        player = AVPlayer(url: URL(string: bitRateManager.currentLink.rawValue)!)
 //        player.currentItem?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
         bindTimer()
         
@@ -72,10 +74,6 @@ final class StreamViewController: UIViewController {
             print("Ошибка настройки аудиосессии: \(error.localizedDescription)")
         }
 //
-        
-
-        
-
         
         commandCenter.playCommand.addTarget { [weak self] _ in
             self?.player.play()
@@ -119,7 +117,7 @@ final class StreamViewController: UIViewController {
             timerButton.isEnabled = false
             timerManager.stop()
         } else {
-            player = AVPlayer(url: bitRateManager.currentLink.url)
+            player = AVPlayer(url: URL(string:bitRateManager.currentLink.rawValue)!)
             try! AVAudioSession.sharedInstance().setActive(true)
             player.play()
             playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
@@ -128,7 +126,6 @@ final class StreamViewController: UIViewController {
         
 //        updateNowPlayingInfo()
     }
-    
     
     @IBAction func shareSheetTapped(_ sender: UIBarButtonItem) {
         presentShareSheet()
