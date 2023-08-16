@@ -23,15 +23,6 @@ final class TimerManager: ObservableObject {
             }
         }
     }
-
-    
-//             Время окончания таймера (на будущее)
-//            let formattedTime = formatter.string(
-//                from: Date().advanced(by: remainingTime)
-//            )
-//        }
-//    }
-    
     
     // MARK: - Initializers
     private init() {}

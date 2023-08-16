@@ -61,9 +61,6 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
         var content = cell.defaultContentConfiguration()
         content.textProperties.color = .white
         content.secondaryTextProperties.color = .opaqueSeparator
-        
-    
-        
         content.text = bitRate[indexPath.row].title
         content.secondaryText = bitRate[indexPath.row].description
         

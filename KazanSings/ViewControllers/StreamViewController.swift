@@ -36,44 +36,20 @@ final class StreamViewController: UIViewController {
         }
     }
     
-//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//        if keyPath == "status" {
-//            switch player.status {
-//            case .readyToPlay:
-//
-//                print(" Player is ready to play. You might want to start playing here")
-//                break
-//            case .failed:
-//                print("Player has failed with error: \(String(describing: player.error))")
-//                break
-//            case .unknown:
-//                print("Player has failed with error: \(String(describing: player.error))")
-//                break
-//            @unknown default:
-//                print("Player has failed with error: \(String(describing: player.error))")
-//                fatalError()
-//            }
-//        }
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
- // добавляем начальные значение битрейтов
         bitRateManager.setupRemoteConfigDefaults()
         bitRateManager.updateBitRatesWithRC()
         bitRateManager.fetchRemoteConfig()
         
-        player = AVPlayer(url: URL(string: bitRateManager.currentLink)!)
-//        player.currentItem?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
+        player = AVPlayer(url: URL(string: bitRateManager.currentLink.rawValue)!)
         bindTimer()
         
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-//            try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print("Ошибка настройки аудиосессии: \(error.localizedDescription)")
         }
-//
         
         commandCenter.playCommand.addTarget { [weak self] _ in
             self?.player.play()
@@ -81,7 +57,6 @@ final class StreamViewController: UIViewController {
             return .success
         }
         
-        // Добавляем обработчик для команды паузы
         commandCenter.pauseCommand.addTarget { [weak self] _ in
             self?.player.pause()
             self?.timerManager.stop()
@@ -102,11 +77,9 @@ final class StreamViewController: UIViewController {
             }
             MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPMediaItemPropertyArtwork] = artwork
         }
-    
     }
     
     private func pausePlayer() {
-//        try! AVAudioSession.sharedInstance().setActive(false)
         player.pause()
         playButton.setImage(UIImage(named: "playbutton"), for: .normal)
     }
@@ -117,14 +90,12 @@ final class StreamViewController: UIViewController {
             timerButton.isEnabled = false
             timerManager.stop()
         } else {
-            player = AVPlayer(url: URL(string:bitRateManager.currentLink)!)
+            player = AVPlayer(url: URL(string:bitRateManager.currentLink.rawValue)!)
             try! AVAudioSession.sharedInstance().setActive(true)
             player.play()
             playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
             timerButton.isEnabled = true
         }
-        
-//        updateNowPlayingInfo()
     }
     
     @IBAction func shareSheetTapped(_ sender: UIBarButtonItem) {
@@ -132,7 +103,7 @@ final class StreamViewController: UIViewController {
     }
 }
 
- // MARK: - ShareSheet
+// MARK: - ShareSheet
 extension StreamViewController {
     func presentShareSheet() {
         let shareInfo = ShareSheet.getShareSheet()

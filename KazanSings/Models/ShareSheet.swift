@@ -20,7 +20,7 @@ extension ShareSheet {
                     Здесь звучат песни, которые больше нигде не звучат.
                     """,
             image: "logosheet.jpg",
-            link: ""
+            link: "https://www.kazansings.ru/"
         )
     }
 }
