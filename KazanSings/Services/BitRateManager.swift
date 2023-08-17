@@ -52,7 +52,7 @@ final class BitRateManager: ObservableObject {
     
     func fetchRemoteConfig() {
         
-        RemoteConfig.remoteConfig().fetch(withExpirationDuration: 0) {
+        RemoteConfig.remoteConfig().fetch {
             [unowned self] (status, error) in
             guard error == nil else {
                 print("something goes wrong: \(String(describing: error))")

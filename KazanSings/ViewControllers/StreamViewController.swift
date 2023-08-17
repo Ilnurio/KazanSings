@@ -108,7 +108,7 @@ extension StreamViewController {
     func presentShareSheet() {
         let shareInfo = ShareSheet.getShareSheet()
         let image = UIImage(named: shareInfo.image) ?? UIImage()
-        let items: [Any] = [shareInfo.title, image]
+        let items: [Any] = [image,shareInfo.title,shareInfo.link]
         
         let shareSheet = UIActivityViewController(activityItems: items, applicationActivities: nil)
         shareSheet.popoverPresentationController?.sourceView = self.view

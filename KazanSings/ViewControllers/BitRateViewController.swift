@@ -77,15 +77,12 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.visibleCells.forEach { cell in
             cell.accessoryType = .none
         }
-        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         
         tableView.deselectRow(at: indexPath, animated: true)
         
         BitRateManager.shared.currentLink = bitRate[indexPath.row].link
         print(BitRateManager.shared.currentLink)
-        
     }
-    
-    
 }
