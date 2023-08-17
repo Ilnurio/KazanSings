@@ -10,24 +10,13 @@ import Firebase
 import FirebaseCore
 import FirebaseRemoteConfig
 
-enum BitRateURL: String {
-    case url_64
-    case url_128
-    case url_192
-    case url_320
-
-    var url: URL {
-        switch self {
-        case .url_64:
-            return URL(string: "https://stream01.hitv.ru:8443/kazansings-64kb")!
-        case .url_128:
-            return URL(string: "https://stream01.hitv.ru:8443/kazansings-128kb")!
-        case .url_192:
-            return URL(string: "https://stream01.hitv.ru:8443/kazansings-192kb")!
-        case .url_320:
-            return URL(string: "https://stream01.hitv.ru:8443/kazansings-320kb")!
-        }
-    }
+struct BitRateURL {
+    static var urls: [String: URL] = [
+        "url_64": URL(string: "https://stream01.hitv.ru:8443/kazansings-64kb")!,
+        "url_128": URL(string: "https://stream01.hitv.ru:8443/kazansings-128kb")!,
+        "url_192": URL(string: "https://stream01.hitv.ru:8443/kazansings-192kb")!,
+        "url_320": URL(string: "https://stream01.hitv.ru:8443/kazansings-320kb")!
+    ]
 }
 
 enum BitRateURLRC: String {
@@ -39,18 +28,19 @@ enum BitRateURLRC: String {
 
 final class BitRateManager: ObservableObject {
     static let shared = BitRateManager()
+    let bitRate = BitRate.getBitRate()
     
-    var currentLink = BitRateURL.url_64
+    var currentLink = BitRateURL.urls["url_64"]!
     
     private init() {}
     
     func setupRemoteConfigDefaults() {
         
         let defaultValues: [String: Any?] = [
-            BitRateURLRC.URL_64.rawValue: BitRateURL.url_64,
-            BitRateURLRC.URL_128.rawValue: BitRateURL.url_128,
-            BitRateURLRC.URL_192.rawValue: BitRateURL.url_192,
-            BitRateURLRC.URL_320.rawValue: BitRateURL.url_320
+            BitRateURLRC.URL_64.rawValue: BitRateURL.urls["url_64"],
+            BitRateURLRC.URL_128.rawValue: BitRateURL.urls["url_128"],
+            BitRateURLRC.URL_192.rawValue: BitRateURL.urls["url_192"],
+            BitRateURLRC.URL_320.rawValue: BitRateURL.urls["url_320"]
         ]
         
         RemoteConfig.remoteConfig().setDefaults(defaultValues as? [String: NSObject])
@@ -81,7 +71,10 @@ final class BitRateManager: ObservableObject {
         let url_192 = string(forKey: "url_192")
         let url_320 = string(forKey: "url_320")
         
-        
+        BitRateURL.urls["url_64"] = URL(string: url_64)!
+        BitRateURL.urls["url_128"] = URL(string: url_128)!
+        BitRateURL.urls["url_192"] = URL(string: url_192)!
+        BitRateURL.urls["url_320"] = URL(string: url_320)!
     }
     
     func string(forKey key: String) -> String {

@@ -5,10 +5,12 @@
 //  Created by M I C H A E L on 06.06.2023.
 //
 
+import Foundation
+
 struct BitRate {
     let title: String
     let description: String
-    let link: BitRateURL
+    var link: URL
 }
 
 extension BitRate {
@@ -17,22 +19,22 @@ extension BitRate {
             BitRate(
                 title: "Низкое",
                 description: "64 kb",
-                link: BitRateURL.url_64
+                link: BitRateURL.urls["url_64"]!
             ),
             BitRate(
                 title: "Среднее",
                 description: "128 kb",
-                link: BitRateURL.url_128
+                link: BitRateURL.urls["url_128"]!
             ),
             BitRate(
                 title: "Высокое",
                 description: "192 kb",
-                link: BitRateURL.url_192
+                link: BitRateURL.urls["url_192"]!
             ),
             BitRate(
                 title: "Очень высокое",
                 description: "320 kb",
-                link: BitRateURL.url_320
+                link: BitRateURL.urls["url_320"]!
             )
         ]
     }
