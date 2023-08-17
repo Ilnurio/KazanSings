@@ -9,7 +9,6 @@ struct ShareSheet {
     let title: String
     let image: String
     let link: String
-        
 }
 
 extension ShareSheet {
