@@ -9,8 +9,6 @@
 
 Откройте для себя творчество независимых музыкантов из центральной России и поддержите их своим вниманием и лайками!
 
-
-
 The mobile application "Kazan Sings" is a simple and free way to listen to the independent online music radio of the region.
 For musicians, this means zero advertising costs for their concerts. For listeners, this is the easiest way to live in the world of live music.
 
