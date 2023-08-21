@@ -491,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 77WLJ5J8T8;
+				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KazanSings/Application/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Казань Поёт";
@@ -525,7 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 77WLJ5J8T8;
+				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KazanSings/Application/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Казань Поёт";

@@ -51,8 +51,7 @@ final class BitRateManager: ObservableObject {
     }
 
     func fetchRemoteConfig() {
-        RemoteConfig.remoteConfig().fetch {
-            [unowned self] (status, error) in
+        RemoteConfig.remoteConfig().fetch { [unowned self] (status, error) in
             guard error == nil else {
                 print("something goes wrong: \(String(describing: error))")
                 return
@@ -60,9 +59,7 @@ final class BitRateManager: ObservableObject {
 
             print("Good connection from RemoteConfig")
             RemoteConfig.remoteConfig().activate()
-            DispatchQueue.main.async {
-                self.updateBitRatesWithRC()
-            }
+            self.updateBitRatesWithRC()
         }
     }
 
