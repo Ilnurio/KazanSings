@@ -100,6 +100,11 @@ final class InfoTableViewController: UITableViewController {
                 withIdentifier: infoList[indexPath.section].segueIDs?[indexPath.row] ?? "",
                 sender: nil
             )
+        case 2:
+            guard let url = URL(string: link) else { return }
+            showOkAlert(title: title, message: link) { _ in
+                UIApplication.shared.open(url)
+            }
         default:
             break
         }

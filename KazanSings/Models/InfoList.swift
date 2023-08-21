@@ -43,7 +43,7 @@ extension InfoList {
                              "telegram",
                              "whatsApp"],
                 links: ["https://www.kazansings.ru",
-                        "on-line-misha@mail.ru",
+                        "production@kazansings.ru",
                         "https://vk.me/join/AJQ1dxSPjSPs_1X5AHsBqPnf",
                         "https://t.me/kazanpoet",
                         "https://chat.whatsapp.com/DcYXYr39xVLEbu9wGQtB5u"]
@@ -65,9 +65,9 @@ extension InfoList {
                 imageNames: [//"star.fill",
                              "list.dash.header.rectangle",
                              "list.bullet.rectangle.fill"],
-                segueIDs: [//nil,
-                           "showPolicy",
-                           "showRules"]
+                links: [//nil,
+                        "https://doc-hosting.flycricket.io/kazan-sings-privacy-policy-ios/a6ab2e6f-90b2-4c17-94c8-e5c6f2054f53/privacy",
+                        "https://doc-hosting.flycricket.io/politika-i-usloviia-ispolzovaniia-prilozheniia-kazansings/765ebec6-5589-4ce8-bc4c-d4f17f21433b/terms"]
             ),
             InfoList(
                 header: "",
