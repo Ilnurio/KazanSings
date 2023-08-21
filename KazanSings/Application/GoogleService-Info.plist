@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1033540208043-agsb793oh0gear5mfgtb7drvbkrck5q3.apps.googleusercontent.com</string>
+	<string>1033540208043-8fjomhfdinhc6vl6r5224cbqsjia3f1r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1033540208043-agsb793oh0gear5mfgtb7drvbkrck5q3</string>
+	<string>com.googleusercontent.apps.1033540208043-8fjomhfdinhc6vl6r5224cbqsjia3f1r</string>
 	<key>API_KEY</key>
 	<string>AIzaSyB5fxKgpZdK9_cttu7_5dJxItoCJ7eVgpw</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>SmartActive.KazanSings</string>
+	<string>com.smartactive.KazanSings</string>
 	<key>PROJECT_ID</key>
 	<string>kazansings-9ea4d</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1033540208043:ios:b58cb2a8a1b9e4e4ce7eee</string>
+	<string>1:1033540208043:ios:6c7385a38231c944ce7eee</string>
 </dict>
 </plist>

@@ -46,10 +46,10 @@ final class BitRateManager: ObservableObject {
         RemoteConfig.remoteConfig().setDefaults(defaultValues as? [String: NSObject])
 
         let settings = RemoteConfigSettings()
-        settings.minimumFetchInterval = 3600
+        settings.minimumFetchInterval = 0
         RemoteConfig.remoteConfig().configSettings = settings
     }
-    
+
     func fetchRemoteConfig() {
         RemoteConfig.remoteConfig().fetch {
             [unowned self] (status, error) in
@@ -57,25 +57,27 @@ final class BitRateManager: ObservableObject {
                 print("something goes wrong: \(String(describing: error))")
                 return
             }
-            
+
             print("Good connection from RemoteConfig")
             RemoteConfig.remoteConfig().activate()
-            self.updateBitRatesWithRC()
+            DispatchQueue.main.async {
+                self.updateBitRatesWithRC()
+            }
         }
     }
-    
+
     func updateBitRatesWithRC() {
         let url_64 = string(forKey: "url_64")
         let url_128 = string(forKey: "url_128")
         let url_192 = string(forKey: "url_192")
         let url_320 = string(forKey: "url_320")
-        
+
         BitRateURL.urls[.URL_64] = URL(string: url_64)!
         BitRateURL.urls[.URL_128] = URL(string: url_128)!
         BitRateURL.urls[.URL_192] = URL(string: url_192)!
         BitRateURL.urls[.URL_320] = URL(string: url_320)!
     }
-    
+
     func string(forKey key: String) -> String {
         RemoteConfig.remoteConfig().configValue(forKey: key).stringValue ?? "https://stream01.hitv.ru:8443/kazansings-64kb"
     }
