@@ -46,7 +46,7 @@ final class BitRateManager: ObservableObject {
         RemoteConfig.remoteConfig().setDefaults(defaultValues as? [String: NSObject])
 
         let settings = RemoteConfigSettings()
-        settings.minimumFetchInterval = 0
+        settings.minimumFetchInterval = 3600
         RemoteConfig.remoteConfig().configSettings = settings
     }
 
