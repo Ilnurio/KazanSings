@@ -10,7 +10,7 @@ import Foundation
 struct BitRate {
     let title: String
     let description: String
-    var link: URL
+    let link: URL
 }
 
 extension BitRate {
@@ -19,22 +19,22 @@ extension BitRate {
             BitRate(
                 title: "Низкое",
                 description: "64 kb",
-                link: BitRateURL.urls[.URL_64]!
+                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-64kb")!
             ),
             BitRate(
                 title: "Среднее",
                 description: "128 kb",
-                link: BitRateURL.urls[.URL_128]!
+                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-128kb")!
             ),
             BitRate(
                 title: "Высокое",
                 description: "192 kb",
-                link: BitRateURL.urls[.URL_192]!
+                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-192kb")!
             ),
             BitRate(
                 title: "Очень высокое",
                 description: "320 kb",
-                link: BitRateURL.urls[.URL_320]!
+                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-320kb")!
             )
         ]
     }

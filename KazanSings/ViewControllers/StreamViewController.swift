@@ -38,10 +38,6 @@ final class StreamViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bitRateManager.setupRemoteConfigDefaults()
-        bitRateManager.updateBitRatesWithRC()
-        bitRateManager.fetchRemoteConfig()
-        
         player = AVPlayer(url: bitRateManager.currentLink)
         bindTimer()
         
@@ -108,10 +104,14 @@ extension StreamViewController {
     func presentShareSheet() {
         let shareInfo = ShareSheet.getShareSheet()
         let image = UIImage(named: shareInfo.image) ?? UIImage()
-        let items: [Any] = [image,shareInfo.title,shareInfo.link]
+        let items: [Any] = [image, shareInfo.title, shareInfo.link]
         
-        let shareSheet = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        shareSheet.popoverPresentationController?.sourceView = self.view
+        let shareSheet = UIActivityViewController(
+            activityItems: items,
+            applicationActivities: nil
+        )
+        
+        shareSheet.excludedActivityTypes = [.saveToCameraRoll, .print]
         present(shareSheet, animated: true, completion: nil)
     }
 }
