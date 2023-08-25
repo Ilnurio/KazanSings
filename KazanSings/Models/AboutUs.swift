@@ -21,7 +21,7 @@ extension AboutUs {
         [
             AboutUs(
                 statusInTeam: "Основатель",
-                imageName: ["teamlead"],
+                imageName: ["teamLead"],
                 nameSurName: ["Андрей Лысяков"],
                 link: ["https://t.me/Andy_Bald", "https://vk.com/id96111646"],
                 title: ["Перейти в TG?", "Перейти в VK?"],
@@ -42,7 +42,7 @@ extension AboutUs {
             AboutUs(
                 statusInTeam: "IOS Разработчик",
                 imageName: ["programmerone", "programmertwo"],
-                nameSurName: ["Михаил Бухрашвили", "Ильнур Фаттахов"],
+                nameSurName: ["Mikhail Bukhrashvili", "Ильнур Фаттахов"],
                 link: ["https://github.com/GE-Developer", "https://github.com/Ilnurio"],
                 title: ["Перейти на GitHub?", "Перейти на GitHub?"]
             )
