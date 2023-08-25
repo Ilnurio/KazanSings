@@ -19,22 +19,22 @@ extension BitRate {
             BitRate(
                 title: "Низкое",
                 description: "64 kb",
-                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-64kb")!
+                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-64k")!
             ),
             BitRate(
                 title: "Среднее",
                 description: "128 kb",
-                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-128kb")!
+                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-128k")!
             ),
             BitRate(
                 title: "Высокое",
                 description: "192 kb",
-                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-192kb")!
+                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-192k")!
             ),
             BitRate(
                 title: "Очень высокое",
                 description: "320 kb",
-                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-320kb")!
+                link: URL(string: "https://stream01.hitv.ru:8443/kazansings-320k")!
             )
         ]
     }

@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" secondItem="U67-Vz-wsD" secondAttribute="height" multiplier="1:1" id="cVd-9h-rHe"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8We-d4-pvM">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8We-d4-pvM">
                                 <rect key="frame" x="144.33333333333334" y="501.66666666666669" width="104.33333333333334" height="104.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8We-d4-pvM" secondAttribute="height" id="z1b-Ki-hJN"/>
@@ -36,7 +36,7 @@
                                     <action selector="playButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Spc-7Q-2C8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88L-aH-UvS">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88L-aH-UvS">
                                 <rect key="frame" x="78.666666666666671" y="450" width="39.333333333333329" height="38.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="88L-aH-UvS" secondAttribute="height" multiplier="43:41" id="uAO-6R-Jnj"/>
@@ -50,7 +50,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8v-Kc-Xia">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8v-Kc-Xia">
                                 <rect key="frame" x="274.66666666666669" y="449.66666666666669" width="40.333333333333314" height="38.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="N8v-Kc-Xia" secondAttribute="height" multiplier="1.02:1" id="cC6-Wp-bPj"/>
@@ -64,12 +64,16 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-sA-lFp">
+                                <rect key="frame" x="178" y="535.33333333333337" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="MainColor"/>
                         <constraints>
                             <constraint firstItem="N8v-Kc-Xia" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.046495" id="3Cq-O5-5Kz"/>
                             <constraint firstItem="N8v-Kc-Xia" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" id="BJy-dE-4KY"/>
+                            <constraint firstItem="Ugd-sA-lFp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GRn-AB-qgZ"/>
                             <constraint firstItem="88L-aH-UvS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" id="N2D-Kx-kbR"/>
                             <constraint firstItem="U67-Vz-wsD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TNP-ho-V2r"/>
                             <constraint firstItem="88L-aH-UvS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0439914" id="VQd-N8-jgX"/>
@@ -78,6 +82,7 @@
                             <constraint firstItem="8We-d4-pvM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.3" id="ezq-QO-1Bv"/>
                             <constraint firstItem="N8v-Kc-Xia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="hW8-UI-PMx"/>
                             <constraint firstItem="U67-Vz-wsD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="iKf-7R-lZ3"/>
+                            <constraint firstItem="Ugd-sA-lFp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.3" id="mYN-cN-gAe"/>
                             <constraint firstItem="U67-Vz-wsD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="oAM-W4-g60"/>
                             <constraint firstItem="88L-aH-UvS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="vhq-21-vNQ"/>
                         </constraints>
@@ -98,6 +103,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="Ugd-sA-lFp" id="qwI-vi-2WO"/>
+                        <outlet property="bitRateButton" destination="88L-aH-UvS" id="l87-3u-rxF"/>
                         <outlet property="playButton" destination="8We-d4-pvM" id="va3-Gw-hFl"/>
                         <outlet property="timerButton" destination="N8v-Kc-Xia" id="kGA-28-36x"/>
                     </connections>

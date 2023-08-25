@@ -11,9 +11,7 @@ final class BitRateManager: ObservableObject {
     static let shared = BitRateManager()
     private let bitRate = BitRate.getBitRate()
     
-    var currentLink: URL
+    var currentLink: URL?
     
-    private init() {
-        currentLink = bitRate.first!.link
-    }
+    private init() {}
 }

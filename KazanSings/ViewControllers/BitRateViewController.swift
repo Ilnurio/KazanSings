@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 final class BitRateViewController: UIViewController {
 
@@ -13,6 +14,9 @@ final class BitRateViewController: UIViewController {
     @IBOutlet private var bitRateTableView: UITableView!
     
     private let bitRate = BitRate.getBitRate()
+    
+    private let audioManager = AudioManager.shared
+    private let bitRateManager = BitRateManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +31,6 @@ final class BitRateViewController: UIViewController {
     @IBAction private func backButtonPressed() {
         dismiss(animated: true)
     }
-    
-
 }
 
 extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
@@ -64,7 +66,7 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
         content.text = bitRate[indexPath.row].title
         content.secondaryText = bitRate[indexPath.row].description
         
-        let curLink = BitRateManager.shared.currentLink
+        let curLink = bitRateManager.currentLink
         if bitRate[indexPath.row].link == curLink {
             cell.accessoryType = .checkmark
         }
@@ -82,7 +84,10 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        BitRateManager.shared.currentLink = bitRate[indexPath.row].link
-        print(BitRateManager.shared.currentLink)
+        bitRateManager.currentLink = FirebaseManager.shared.urlDict[indexPath.row] ?? bitRate[indexPath.row].link
+        print("\(String(describing: bitRateManager.currentLink))")
+        
+        
+        
     }
 }

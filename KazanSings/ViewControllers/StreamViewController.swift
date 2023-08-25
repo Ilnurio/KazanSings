@@ -11,22 +11,27 @@ import Combine
 
 final class StreamViewController: UIViewController {
     
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet private var playButton: UIButton!
     @IBOutlet private var timerButton: UIButton!
+    @IBOutlet private var bitRateButton: UIButton!
     
     private let bitRateManager = BitRateManager.shared
     
-    private let commandCenter = MPRemoteCommandCenter.shared()
-    private var player: AVPlayer!
+//    private let commandCenter = MPRemoteCommandCenter.shared()
+//    private var player: AVPlayer!
     
     private let timerManager = TimerManager.shared
     private var cancelables: Set<AnyCancellable> = []
     private var remainingTime: TimeInterval = 0
     
+    private let audioManager = AudioManager.shared
+    
     private var timer: Timer? {
         didSet {
             if timer == nil && remainingTime == 0 {
-                pausePlayer()
+                audioManager.pausePlayer(playButton)
                 timerButton.tintColor = .white
             } else if timer == nil {
                 timerButton.tintColor = .white
@@ -38,60 +43,32 @@ final class StreamViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        player = AVPlayer(url: bitRateManager.currentLink)
-        bindTimer()
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-        } catch {
-            print("Ошибка настройки аудиосессии: \(error.localizedDescription)")
-        }
-        
-        commandCenter.playCommand.addTarget { [weak self] _ in
-            self?.player.play()
-            self?.playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
-            return .success
-        }
-        
-        commandCenter.pauseCommand.addTarget { [weak self] _ in
-            self?.player.pause()
-            self?.timerManager.stop()
-            self?.timerButton.isEnabled = false
-            self?.playButton.setImage(UIImage(named: "playbutton"), for: .normal)
-            return .success
-        }
-        
-        var nowPlayingInfo = [String: Any]()
-        nowPlayingInfo[MPMediaItemPropertyTitle] = "Казань Поёт"
-        nowPlayingInfo[MPMediaItemPropertyArtist] = "Радио - Прямой эфир"
-        
-        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
-        
-        if let artworkImage = UIImage(named: "AppIcon") {
-            let artwork = MPMediaItemArtwork(boundsSize: artworkImage.size) { _ in
-                return artworkImage
+        print("LINK \(String(describing: bitRateManager.currentLink))")
+        print("START FETCHING")
+        print("LINK \(String(describing: bitRateManager.currentLink))")
+        FirebaseManager.shared.fetchLinks {
+            print("FETCHED")
+            print("LINK \(String(describing: self.bitRateManager.currentLink))")
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+                self.playButton.isHidden = false
+                self.bitRateButton.isHidden = false
+                self.timerButton.isHidden = false
+                self.audioManager.setupRadio(self.playButton, self.timerButton)
+                self.bindTimer()
+                print("RADIO IS READY WITH NEW LINK")
+                print("LINK \(String(describing: self.bitRateManager.currentLink))")
             }
-            MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPMediaItemPropertyArtwork] = artwork
         }
-    }
-    
-    private func pausePlayer() {
-        player.pause()
-        playButton.setImage(UIImage(named: "playbutton"), for: .normal)
+        
+        
+//        audioManager.setupRadio(playButton, timerButton)
+        
+//        bindTimer()
     }
     
     @IBAction private func playButtonPressed() {
-        if player.timeControlStatus == .playing {
-            pausePlayer()
-            timerButton.isEnabled = false
-            timerManager.stop()
-        } else {
-            player = AVPlayer(url: bitRateManager.currentLink)
-            try! AVAudioSession.sharedInstance().setActive(true)
-            player.play()
-            playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
-            timerButton.isEnabled = true
-        }
+        audioManager.refresh(playButton, timerButton)
     }
     
     @IBAction func shareSheetTapped(_ sender: UIBarButtonItem) {
