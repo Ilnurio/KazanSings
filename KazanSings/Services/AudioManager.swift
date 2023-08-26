@@ -36,6 +36,7 @@ final class AudioManager {
             self?.player = AVPlayer(url: (self?.bitRateManager.currentLink)!)
             try! AVAudioSession.sharedInstance().setActive(true)
             self?.player.play()
+            timerButton.isEnabled = true
             playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
             return .success
         }

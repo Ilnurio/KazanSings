@@ -87,7 +87,10 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
         bitRateManager.currentLink = FirebaseManager.shared.urlDict[indexPath.row] ?? bitRate[indexPath.row].link
         print("\(String(describing: bitRateManager.currentLink))")
         
-        
-        
+        if audioManager.player.timeControlStatus == .playing {
+            audioManager.player = AVPlayer(url: bitRateManager.currentLink!)
+            try! AVAudioSession.sharedInstance().setActive(true)
+            audioManager.player.play()
+        }
     }
 }
