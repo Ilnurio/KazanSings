@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FounderViewController: UIViewController {
+final class FounderViewController: UIViewController {
     
     @IBOutlet var imageLabel: UIImageView!
     @IBOutlet var introductionLabel: UILabel!
@@ -19,6 +19,7 @@ class FounderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // imageLabel.image = UIImage(named: aboutUs.first?.imageName.first ?? "")
         introductionLabel.text = aboutUs.first?.introduction
         descriptionLabel.text = aboutUs.first?.description
     }

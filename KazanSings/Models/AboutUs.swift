@@ -42,7 +42,7 @@ extension AboutUs {
             AboutUs(
                 statusInTeam: "IOS Разработчик",
                 imageName: ["programmerone", "programmertwo"],
-                nameSurName: ["Mikhail Bukhrashvili", "Ильнур Фаттахов"],
+                nameSurName: ["Михаил Бухрашвили", "Ильнур Фаттахов"],
                 link: ["https://github.com/GE-Developer", "https://github.com/Ilnurio"],
                 title: ["Перейти на GitHub?", "Перейти на GitHub?"]
             )
