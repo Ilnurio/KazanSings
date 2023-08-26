@@ -19,7 +19,6 @@ final class FounderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // imageLabel.image = UIImage(named: aboutUs.first?.imageName.first ?? "")
         introductionLabel.text = aboutUs.first?.introduction
         descriptionLabel.text = aboutUs.first?.description
     }
