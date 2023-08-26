@@ -15,10 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-//        DispatchQueue.main.async {
-//            FirebaseManager.shared.fetchLinks()
-//        }
-        
         return true
     }
 

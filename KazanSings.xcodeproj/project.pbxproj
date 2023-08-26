@@ -36,6 +36,7 @@
 		4C9571C82A994FB0003061B6 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9571C72A994FB0003061B6 /* FirebaseManager.swift */; };
 		4CB515D82A2BEC7400F9E4EC /* Ext + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB515D72A2BEC7400F9E4EC /* Ext + Alert.swift */; };
 		4CB515DA2A2C0E5600F9E4EC /* Mail Ext + InfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB515D92A2C0E5600F9E4EC /* Mail Ext + InfoTableVC.swift */; };
+		4CE88BE32A99B8C1008B700D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE88BE22A99B8C1008B700D /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		4C9571C72A994FB0003061B6 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		4CB515D72A2BEC7400F9E4EC /* Ext + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + Alert.swift"; sourceTree = "<group>"; };
 		4CB515D92A2C0E5600F9E4EC /* Mail Ext + InfoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mail Ext + InfoTableVC.swift"; sourceTree = "<group>"; };
+		4CE88BE22A99B8C1008B700D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				4C2C4FFA2A2F9D0B0030C24C /* BitRateManager.swift */,
 				4C9571C72A994FB0003061B6 /* FirebaseManager.swift */,
 				4C8D44C32A98ECEE00CE0B14 /* AudioManager.swift */,
+				4CE88BE22A99B8C1008B700D /* UserManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				460F80332A2BFD6F00F7A55B /* ShareSheet.swift in Sources */,
 				466F96A22A2E69D6009279C6 /* AboutUsTableViewController.swift in Sources */,
 				4C8D44C42A98ECEE00CE0B14 /* AudioManager.swift in Sources */,
+				4CE88BE32A99B8C1008B700D /* UserManager.swift in Sources */,
 				466F96A02A2E638A009279C6 /* AboutUs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -65,9 +65,8 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
         content.secondaryTextProperties.color = .opaqueSeparator
         content.text = bitRate[indexPath.row].title
         content.secondaryText = bitRate[indexPath.row].description
-        
-        let curLink = bitRateManager.currentLink
-        if bitRate[indexPath.row].link == curLink {
+             
+        if UserManager.userBitRateIndex == indexPath.row {
             cell.accessoryType = .checkmark
         }
         
@@ -80,12 +79,13 @@ extension BitRateViewController: UITableViewDelegate, UITableViewDataSource {
             cell.accessoryType = .none
         }
         
+        UserManager.userBitRateIndex = indexPath.row
+        
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        bitRateManager.currentLink = FirebaseManager.shared.urlDict[indexPath.row] ?? bitRate[indexPath.row].link
-        print("\(String(describing: bitRateManager.currentLink))")
+        bitRateManager.currentLink = FirebaseManager.shared.urlDict[UserManager.userBitRateIndex] ?? bitRate[UserManager.userBitRateIndex].link
         
         if audioManager.player.timeControlStatus == .playing {
             audioManager.player = AVPlayer(url: bitRateManager.currentLink!)

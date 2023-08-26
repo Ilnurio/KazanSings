@@ -40,7 +40,7 @@ extension AboutUs {
                 title: ["Написать в ВК?"]
             ),
             AboutUs(
-                statusInTeam: "IOS Разработчик",
+                statusInTeam: "iOS Разработчики",
                 imageName: ["programmerone", "programmertwo"],
                 nameSurName: ["Михаил Бухрашвили", "Ильнур Фаттахов"],
                 link: ["https://github.com/GE-Developer", "https://github.com/Ilnurio"],

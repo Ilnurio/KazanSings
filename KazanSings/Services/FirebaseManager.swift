@@ -20,17 +20,14 @@ final class FirebaseManager {
     
     var urlDict: [Int: URL?] = [:]
     
+    private let bitRate = BitRate.getBitRate()
+    
     private init() {}
     
     func fetchLinks(completion: @escaping () -> ()) {
         let remoteConfig = RemoteConfig.remoteConfig()
         let keys: [Int: Links] = [0: .url_64, 1: .url_128, 2: .url_192, 3: .url_320]
-        
-        // Set default values
-//        let defaultValues: [String: NSObject] = ["my_url": "https://defaulturl.com" as NSObject]
-//        remoteConfig.setDefaults(defaultValues)
-
-        // Fetch the remote values
+  
         
         
         remoteConfig.fetch(withExpirationDuration: 3600) { (status, error) in
@@ -45,12 +42,12 @@ final class FirebaseManager {
                             }
                             
                         }
-                        print(self.urlDict)
+                        
                     
-                        if let curUrl = self.urlDict[1] {
+                        if let curUrl = self.urlDict[UserManager.userBitRateIndex] {
                             BitRateManager.shared.currentLink = curUrl
                         } else {
-                            BitRateManager.shared.currentLink = BitRate.getBitRate().first?.link
+                            BitRateManager.shared.currentLink = self.bitRate[UserManager.userBitRateIndex].link
                         }
                         completion()
                     }
