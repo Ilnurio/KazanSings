@@ -55,17 +55,17 @@ final class TimerViewController: UIViewController {
     private func updateViews() {
         if timer != nil {
             startButton.setTitle("Завершить", for: .normal)
-            UIView.animate(withDuration: 0.2) {
-                self.timerPicker.alpha = 0
-                self.timeLabel.alpha = 1
-                self.startButton.backgroundColor = UIColor(named: "TimerRed")
+            UIView.animate(withDuration: 0.2) { [weak self] in
+                self?.timerPicker.alpha = 0
+                self?.timeLabel.alpha = 1
+                self?.startButton.backgroundColor = UIColor(named: "TimerRed")
             }
         } else {
             startButton.setTitle("Старт", for: .normal)
-            UIView.animate(withDuration: 0.2) {
-                self.timerPicker.alpha = 1
-                self.timeLabel.alpha = 0
-                self.startButton.backgroundColor = UIColor(named: "MainColor")
+            UIView.animate(withDuration: 0.2) { [weak self] in
+                self?.timerPicker.alpha = 1
+                self?.timeLabel.alpha = 0
+                self?.startButton.backgroundColor = UIColor(named: "MainColor")
             }
         }
     }

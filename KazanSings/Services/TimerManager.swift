@@ -51,6 +51,6 @@ final class TimerManager: ObservableObject {
         } else {
             stop()
         }
-        print(remainingTime)
+        //print(remainingTime)
     }
 }

@@ -43,8 +43,8 @@ extension AboutUs {
                 statusInTeam: "iOS Разработчики",
                 imageName: ["programmerone", "programmertwo"],
                 nameSurName: ["Михаил Бухрашвили", "Ильнур Фаттахов"],
-                link: ["https://github.com/GE-Developer", "https://github.com/Ilnurio"],
-                title: ["Перейти на GitHub?", "Перейти на GitHub?"]
+                link: ["http://mishabux.tilda.ws", "https://github.com/Ilnurio"],
+                title: ["Посмотреть визитку?", "Перейти на GitHub?"]
             )
         ]
     }

@@ -59,13 +59,13 @@ extension InfoList {
             ),
             InfoList(
                 header: "О приложении",
-                titles: [//"Оценить в AppStore",
+                titles: ["Оценить в AppStore",
                          "Политика конфиденциальности",
                          "Правила и условия"],
-                imageNames: [//"star.fill",
+                imageNames: ["star.fill",
                              "list.dash.header.rectangle",
                              "list.bullet.rectangle.fill"],
-                links: [//nil,
+                links: ["https://apps.apple.com/us/app/казань-поёт/id6462927589",
                         "https://doc-hosting.flycricket.io/kazan-sings-privacy-policy-ios/a6ab2e6f-90b2-4c17-94c8-e5c6f2054f53/privacy",
                         "https://doc-hosting.flycricket.io/politika-i-usloviia-ispolzovaniia-prilozheniia-kazansings/765ebec6-5589-4ce8-bc4c-d4f17f21433b/terms"]
             ),

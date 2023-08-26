@@ -14,12 +14,11 @@ final class UserManager {
     
     static var userBitRateIndex: Int! {
         get {
-            return UserDefaults.standard.integer(forKey: Keys.index.rawValue)
+            UserDefaults.standard.integer(forKey: Keys.index.rawValue)
         } set {
             let defaults = UserDefaults.standard
             if let index = newValue {
                 defaults.set(index, forKey: Keys.index.rawValue)
-                print("VALUE: \(index) WAS ADDED TO KEY \(Keys.index.rawValue)")
             } else {
                 defaults.removeObject(forKey: Keys.index.rawValue)
             }

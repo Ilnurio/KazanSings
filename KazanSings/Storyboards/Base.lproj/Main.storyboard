@@ -67,13 +67,6 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-sA-lFp">
                                 <rect key="frame" x="178" y="535.33333333333337" width="37" height="37"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSOLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q12-aJ-rVC">
-                                <rect key="frame" x="10" y="783.66666666666663" width="373" height="14.333333333333371"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="MainColor"/>
@@ -82,7 +75,6 @@
                             <constraint firstItem="N8v-Kc-Xia" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" id="BJy-dE-4KY"/>
                             <constraint firstItem="Ugd-sA-lFp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GRn-AB-qgZ"/>
                             <constraint firstItem="88L-aH-UvS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" id="N2D-Kx-kbR"/>
-                            <constraint firstItem="q12-aJ-rVC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="N90-jS-xBN"/>
                             <constraint firstItem="U67-Vz-wsD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TNP-ho-V2r"/>
                             <constraint firstItem="88L-aH-UvS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0439914" id="VQd-N8-jgX"/>
                             <constraint firstItem="8We-d4-pvM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.122318" id="bKM-zI-Yh3"/>
@@ -93,8 +85,6 @@
                             <constraint firstItem="Ugd-sA-lFp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.3" id="mYN-cN-gAe"/>
                             <constraint firstItem="U67-Vz-wsD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="oAM-W4-g60"/>
                             <constraint firstItem="88L-aH-UvS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="vhq-21-vNQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q12-aJ-rVC" secondAttribute="trailing" constant="10" id="xT1-HZ-6m8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q12-aJ-rVC" secondAttribute="bottom" constant="20" id="zVj-6Z-x7r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Казань Поёт" id="SLG-Ln-gPp">
@@ -113,7 +103,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="DESCRIPTIONLABEL" destination="q12-aJ-rVC" id="fiz-Gm-Xgf"/>
                         <outlet property="activityIndicator" destination="Ugd-sA-lFp" id="qwI-vi-2WO"/>
                         <outlet property="bitRateButton" destination="88L-aH-UvS" id="l87-3u-rxF"/>
                         <outlet property="playButton" destination="8We-d4-pvM" id="va3-Gw-hFl"/>
@@ -653,9 +642,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

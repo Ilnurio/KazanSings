@@ -17,7 +17,6 @@ enum Links: String {
 
 final class FirebaseManager {
     static let shared = FirebaseManager()
-    
     var urlDict: [Int: URL?] = [:]
     
     private let bitRate = BitRate.getBitRate()
@@ -28,26 +27,21 @@ final class FirebaseManager {
         let remoteConfig = RemoteConfig.remoteConfig()
         let keys: [Int: Links] = [0: .url_64, 1: .url_128, 2: .url_192, 3: .url_320]
   
-        
-        
-        remoteConfig.fetch(withExpirationDuration: 0) { (status, error) in
+        remoteConfig.fetch(withExpirationDuration: 0) { [weak self] (status, error) in
             if status == .success {
-                remoteConfig.activate { _, error in
+                remoteConfig.activate { [weak self] _, error in
                     if error == nil {
                         for (key, link) in keys {
                             guard let urlFromRemoteConfig = remoteConfig.configValue(forKey: link.rawValue).stringValue
                             else { return }
                             if let url = URL(string: urlFromRemoteConfig) {
-                                self.urlDict[key] = url
+                                self?.urlDict[key] = url
                             }
-                            
                         }
-                        
-                    
-                        if let curUrl = self.urlDict[UserManager.userBitRateIndex] {
+                        if let curUrl = self?.urlDict[UserManager.userBitRateIndex] {
                             BitRateManager.shared.currentLink = curUrl
                         } else {
-                            BitRateManager.shared.currentLink = self.bitRate[UserManager.userBitRateIndex].link
+                            BitRateManager.shared.currentLink = self?.bitRate[UserManager.userBitRateIndex].link
                         }
                         completion()
                     }
@@ -56,9 +50,5 @@ final class FirebaseManager {
                 print("Error fetching remote config: \(error?.localizedDescription ?? "No error")")
             }
         }
-        
-        
-        
-        
     }
 }

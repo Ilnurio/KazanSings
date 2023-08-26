@@ -11,21 +11,18 @@ import MediaPlayer
 
 final class AudioManager {
     static let shared = AudioManager()
-    
     var player: AVPlayer!
     
     private let timerManager = TimerManager.shared
     private let bitRateManager = BitRateManager.shared
-    
     private let commandCenter = MPRemoteCommandCenter.shared()
     
     private init() {}
     
-    func setupRadio(_ playButton: UIButton, _ timerButton: UIButton) {
+    func setupRadio(_ playButton: UIButton?, _ timerButton: UIButton?) {
         if let url = bitRateManager.currentLink {
             player = AVPlayer(url: url)
-        } 
-        
+        }
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
         } catch {
@@ -36,16 +33,20 @@ final class AudioManager {
             self?.player = AVPlayer(url: (self?.bitRateManager.currentLink)!)
             try! AVAudioSession.sharedInstance().setActive(true)
             self?.player.play()
-            timerButton.isEnabled = true
-            playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
+            if let timerButton = timerButton, let playButton = playButton {
+                timerButton.isEnabled = true
+                playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
+            }
             return .success
         }
         
         commandCenter.pauseCommand.addTarget { [weak self] _ in
             self?.player.pause()
             self?.timerManager.stop()
-            timerButton.isEnabled = false
-            playButton.setImage(UIImage(named: "playbutton"), for: .normal)
+            if let timerButton = timerButton, let playButton = playButton {
+                timerButton.isEnabled = false
+                playButton.setImage(UIImage(named: "playbutton"), for: .normal)
+            }
             return .success
         }
         
@@ -77,7 +78,7 @@ final class AudioManager {
             if let url = bitRateManager.currentLink {
                 player = AVPlayer(url: url)
             }
-            try! AVAudioSession.sharedInstance().setActive(true)
+            try? AVAudioSession.sharedInstance().setActive(true)
             player.play()
             playButton.setImage(UIImage(named: "pausebutton"), for: .normal)
             timerButton.isEnabled = true

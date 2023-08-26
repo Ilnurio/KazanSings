@@ -9,9 +9,9 @@ import Foundation
 
 final class BitRateManager: ObservableObject {
     static let shared = BitRateManager()
-    private let bitRate = BitRate.getBitRate()
-    
     var currentLink: URL?
+    
+    private let bitRate = BitRate.getBitRate()
     
     private init() {}
 }

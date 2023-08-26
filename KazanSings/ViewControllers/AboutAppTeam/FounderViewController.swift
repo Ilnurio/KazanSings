@@ -9,11 +9,11 @@ import UIKit
 
 final class FounderViewController: UIViewController {
     
-    @IBOutlet var imageLabel: UIImageView!
-    @IBOutlet var introductionLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var vkButton: UIButton!
-    @IBOutlet var tgButton: UIButton!
+    @IBOutlet private var imageLabel: UIImageView!
+    @IBOutlet private var introductionLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var vkButton: UIButton!
+    @IBOutlet private var tgButton: UIButton!
     
     private let aboutUs = AboutUs.getAboutUs()
     
@@ -25,8 +25,8 @@ final class FounderViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.imageLabel.round(
-            cornerRadius: self.imageLabel.frame.size.width / 2,
+        imageLabel.round(
+            cornerRadius: imageLabel.frame.size.width / 2,
             borderWidth: 3.0,
             borderColor: .white
         )
@@ -40,20 +40,19 @@ final class FounderViewController: UIViewController {
         vkButton.backgroundColor = UIColor(named: "PopOverColor")
     }
     
-    @IBAction func tgButtonTapped() {
+    @IBAction private func tgButtonTapped() {
         guard let url = URL(string: aboutUs.first?.link.first ?? "") else { return }
         showOkAlert(title: title ?? "", message: aboutUs.first?.title.first ?? "") { _ in
             UIApplication.shared.open(url)
         }
     }
     
-    @IBAction func vkButtonTapped() {
+    @IBAction private func vkButtonTapped() {
         guard let url = URL(string: aboutUs.first?.link.last ?? "") else { return }
         showOkAlert(title: title ?? "", message: aboutUs.first?.title.last ?? "") { _ in
             UIApplication.shared.open(url)
         }
     }
-    
 }
 
 extension UIView {

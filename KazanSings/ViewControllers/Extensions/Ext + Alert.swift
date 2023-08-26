@@ -49,5 +49,4 @@ extension UIViewController {
         alert.addAction(denyAction)
         present(alert, animated: true)
     }
-    
 }
