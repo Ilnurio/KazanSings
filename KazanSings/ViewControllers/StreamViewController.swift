@@ -33,10 +33,12 @@ final class StreamViewController: UIViewController {
             if timer == nil && remainingTime == 0 {
                 audioManager.pausePlayer(playButton)
                 timerButton.tintColor = .white
+                timerButton.isEnabled = false
             } else if timer == nil {
                 timerButton.tintColor = .white
+                timerButton.isEnabled = false
             } else {
-                timerButton.tintColor = .cyan
+                timerButton.tintColor = .orange
             }
         }
     }
