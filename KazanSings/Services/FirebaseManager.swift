@@ -30,7 +30,7 @@ final class FirebaseManager {
   
         
         
-        remoteConfig.fetch(withExpirationDuration: 3600) { (status, error) in
+        remoteConfig.fetch(withExpirationDuration: 0) { (status, error) in
             if status == .success {
                 remoteConfig.activate { _, error in
                     if error == nil {

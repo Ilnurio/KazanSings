@@ -11,6 +11,17 @@ import Combine
 
 final class StreamViewController: UIViewController {
     
+    @IBOutlet var DESCRIPTIONLABEL: UILabel!
+    func descript() {
+        DESCRIPTIONLABEL.text = """
+                                UserDefaults: \(UserManager.userBitRateIndex!)
+                                Current link: \(String(describing: bitRateManager.currentLink?.lastPathComponent))
+                                
+                                Firebase: \(FirebaseManager.shared.urlDict.count) links
+                                """
+    }
+
+    
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet private var playButton: UIButton!
@@ -49,13 +60,14 @@ final class StreamViewController: UIViewController {
                 self.timerButton.isHidden = false
                 self.audioManager.setupRadio(self.playButton, self.timerButton)
                 self.bindTimer()
+                self.descript()
             }
         }
     }
     
     @IBAction private func playButtonPressed() {
         audioManager.refresh(playButton, timerButton)
-        print(bitRateManager.currentLink!)
+        descript()
     }
     
     @IBAction func shareSheetTapped(_ sender: UIBarButtonItem) {
