@@ -13,11 +13,13 @@ enum Links: String {
     case url_128
     case url_192
     case url_320
+    case app_link
 }
 
 final class FirebaseManager {
     static let shared = FirebaseManager()
     var urlDict: [Int: URL?] = [:]
+    var appLinkString: String = ""
     
     private let bitRate = BitRate.getBitRate()
     
@@ -38,6 +40,10 @@ final class FirebaseManager {
                                 self?.urlDict[key] = url
                             }
                         }
+                        
+                        guard let appLinkFromRemoteConfig = remoteConfig.configValue(forKey: Links.app_link.rawValue).stringValue else { return }
+                        self?.appLinkString = appLinkFromRemoteConfig
+                        
                         if let curUrl = self?.urlDict[UserManager.userBitRateIndex] {
                             BitRateManager.shared.currentLink = curUrl
                         } else {

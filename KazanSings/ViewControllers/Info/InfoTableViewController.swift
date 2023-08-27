@@ -100,7 +100,13 @@ final class InfoTableViewController: UITableViewController {
                 withIdentifier: infoList[indexPath.section].segueIDs?[indexPath.row] ?? "",
                 sender: nil
             )
-        case 2:
+        case 2 where indexPath.row == 0:
+            let appLink = FirebaseManager.shared.appLinkString
+            guard let url = URL(string: appLink) else { return }
+            showOkAlert(title: title, message: appLink) { _ in
+                UIApplication.shared.open(url)
+            }
+        case 2 where indexPath.row != 0:
             guard let url = URL(string: link) else { return }
             showOkAlert(title: title, message: link) { _ in
                 UIApplication.shared.open(url)
