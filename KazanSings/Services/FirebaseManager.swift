@@ -29,7 +29,7 @@ final class FirebaseManager {
         let remoteConfig = RemoteConfig.remoteConfig()
         let keys: [Int: Links] = [0: .url_64, 1: .url_128, 2: .url_192, 3: .url_320]
   
-        remoteConfig.fetch(withExpirationDuration: 0) { [weak self] (status, error) in
+        remoteConfig.fetch(withExpirationDuration: 3600) { [weak self] (status, error) in
             if status == .success {
                 remoteConfig.activate { [weak self] _, error in
                     if error == nil {
