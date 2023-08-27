@@ -450,7 +450,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teamLead" translatesAutoresizingMaskIntoConstraints="NO" id="600-Ox-F73">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="600-Ox-F73">
                                                 <rect key="frame" x="110" y="8" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="0E8-m3-I3d"/>
@@ -631,7 +631,6 @@
         <image name="logosheet" width="512" height="512"/>
         <image name="playbutton" width="100" height="100"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="teamLead" width="640" height="609"/>
         <image name="timer" catalog="system" width="128" height="123"/>
         <image name="waveform.path" catalog="system" width="128" height="113"/>
         <namedColor name="MainColor">
